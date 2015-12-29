@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+        <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="活动照片" />
+    </RelativeLayout>
+
+        <!-- <Gallery
+            android:id="@+id/event_photo_gl"
+            android:layout_below="@+id/page_rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            android:spacing="10dp" /> -->
+		<android.support.v4.view.ViewPager
+		    android:id="@+id/event_photo_vp"
+		    android:spacing="10dp"
+            android:layout_below="@+id/page_rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@color/black_t" >
+
+            <TextView
+                android:id="@+id/event_photo_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize_text"
+            	android:textColor="@android:color/white"
+                android:text="照片的标签" />
+
+            <TextView
+                android:id="@+id/event_photo_tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize_text"
+                android:textColor="@color/gray_text"
+                android:text="发起人 上传于 2013年XXXXXXXXXX" />
+
+        </LinearLayout>
+        
+</RelativeLayout>

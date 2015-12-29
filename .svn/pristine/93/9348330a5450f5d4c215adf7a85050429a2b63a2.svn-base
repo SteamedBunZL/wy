@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="订单确认" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/order_confirm_ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_80"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <Button
+            android:id="@+id/order_confirm_btn_pay"
+            style="@style/event_detial_bottom_button"
+            android:layout_height="@dimen/item_height"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_button_orange"
+            android:text="确认付款"
+            android:textColor="@drawable/selector_color_white_gray"
+            android:textSize="@dimen/textsize_button" />
+
+       
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/order_confirm_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/order_confirm_ll_bottom"
+        android:layout_below="@id/page_rl_title"
+        android:background="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:headerDividersEnabled="true" />
+
+</RelativeLayout>

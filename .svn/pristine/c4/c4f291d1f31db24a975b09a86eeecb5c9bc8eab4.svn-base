@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="条件设置" />
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/setcon_cb_receive_immediate_invite"
+        style="@style/edittext_big"
+        android:button="@null"
+        android:checked="true"
+        android:drawableRight="@drawable/selector_checkbox_carmine"
+        android:layout_marginTop="10dp"
+        android:text="接收即时活动"
+        android:textSize="@dimen/textsize_text" />
+
+    <CheckBox
+        android:id="@+id/setcon_cb_receive_one2one_invite"
+        style="@style/info_item_top"
+        android:button="@null"
+        android:drawableRight="@drawable/selector_checkbox_carmine"
+        android:padding="10dp"
+        android:checked="true"
+        android:text="接收一对一邀请"
+        android:textSize="@dimen/textsize_text" />
+
+    <LinearLayout
+        android:id="@+id/setcon_ll_sex"
+        style="@style/info_item_middle"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/info_item_title"
+            android:text="　　　　　性别" />
+
+        <TextView
+            android:id="@+id/setcon_tv_sex"
+            style="@style/info_item_content"
+            android:text="不限" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/setcon_ll_age"
+        style="@style/info_item_middle"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/info_item_title"
+            android:text="　　　　　年龄" />
+
+        <TextView
+            android:id="@+id/setcon_tv_age"
+            style="@style/info_item_content"
+            android:text="不限" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/setcon_cb_real_attestation"
+        style="@style/info_item_bottom"
+        android:button="@null"
+        android:drawableRight="@drawable/selector_checkbox_carmine"
+        android:padding="10dp"
+        android:text="　　　　　通过身份认证"
+        android:textSize="@dimen/textsize_text" />
+
+</LinearLayout>

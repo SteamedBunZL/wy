@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.whoyao.widget.CustomRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/invite_rl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rete_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/invite_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/page_title"
+            android:text="向你我他发邀请" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rete_rl_title" >
+
+        <LinearLayout
+            android:id="@+id/event_add_ll_info0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rete_rl_title"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/invite_add_ll_title"
+                style="@style/info_item_top"
+                android:background="@drawable/rectangle_radius_white_top"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="邀请主题：" />
+
+                <EditText
+                    android:id="@+id/invite_add_et_title"
+                    style="@style/info_item_content"
+                    android:background="@null"
+                    android:hint="2-20个字" />
+
+                <TextView
+                    style="@style/info_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/invite_add_ll_begintime"
+                style="@style/info_item_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="邀请时间：" />
+
+                <TextView
+                    android:id="@+id/invite_add_tv_begintime"
+                    style="@style/info_item_content"
+                    android:hint="请选择邀请时间" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/invite_add_ll_addr"
+                style="@style/info_item_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="邀请地点：" />
+
+                <TextView
+                    android:id="@+id/invite_add_tv_addr"
+                    style="@style/info_item_content"
+                    android:drawableRight="@drawable/loacl"
+                    android:hint="请输入邀请地点" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/invite_add_ll_price"
+                style="@style/info_item_middle"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:text="活动费用：" />
+
+                <EditText
+                    android:id="@+id/invite_add_et_price"
+                    style="@style/info_item_content"
+                    android:background="@null"
+                    android:hint="0元为免费"
+                    android:imeOptions="actionNext"
+                    android:inputType="number" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/invite_add_ll_paytype"
+                style="@style/info_item_middle"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="支付方式：" />
+
+                <TextView
+                    android:id="@+id/invite_add_tv_paytype"
+                    style="@style/info_item_content"
+                    android:hint="请选择支付方式" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/invite_add_ll_description"
+                style="@style/info_item_bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="邀请描述：" />
+
+                <TextView
+                    android:id="@+id/invite_add_et_description"
+                    style="@style/info_item_content"
+                    android:hint="请输入邀请描述" />
+
+                <TextView
+                    style="@style/info_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="0dp" />
+            </LinearLayout>
+
+          
+
+            <Button
+                android:id="@+id/invite_add_btn_enter"
+                style="@style/button_big"
+                android:layout_below="@id/event_add_ll_info0"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:text="发布邀请" />
+        </LinearLayout>
+    </ScrollView>
+
+</com.whoyao.widget.CustomRelativeLayout>

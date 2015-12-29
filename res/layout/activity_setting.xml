@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="设置" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/set_tv_security"
+                style="@style/info_item_top"
+                android:drawableRight="@drawable/arrow_right"
+                android:padding="10dp"
+                android:text="安全和隐私" />
+
+            <TextView
+                android:id="@+id/set_tv_spacetime"
+                style="@style/info_item_middle"
+                android:drawableRight="@drawable/arrow_right"
+                android:padding="10dp"
+                android:text="时空设置" />
+
+            <TextView
+                android:id="@+id/set_tv_condition"
+                style="@style/info_item_bottom"
+                android:drawableRight="@drawable/arrow_right"
+                android:padding="10dp"
+                android:text="条件设置" />
+
+            <CheckBox
+                android:id="@+id/set_cb_sound"
+                style="@style/info_item_top"
+                android:button="@null"
+                android:drawableRight="@drawable/selector_switch"
+                android:padding="10dp"
+                android:layout_marginTop="0dp"
+                android:text="声音" />
+
+            <CheckBox
+                android:id="@+id/set_cb_vibrato"
+                style="@style/info_item_middle"
+                android:button="@null"
+                android:checked="true"
+                android:drawableRight="@drawable/selector_switch"
+                android:padding="10dp"
+                android:text="震动" />
+
+            <CheckBox
+                android:id="@+id/set_cb_message"
+                style="@style/info_item_bottom"
+                android:button="@null"
+                android:checked="true"
+                android:drawableRight="@drawable/selector_switch"
+                android:padding="10dp"
+                android:textSize="@dimen/textsize_text"
+                android:text="退出后接收消息" />
+
+            <LinearLayout
+                android:id="@+id/set_ll_version"
+                style="@style/info_item_top"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="@dimen/textsize_text"
+                    android:text="版本更新" />
+
+                <TextView
+                    android:id="@+id/set_tv_version"
+                    style="@style/info_item_content"
+                    android:textSize="@dimen/textsize_subtext"
+                    android:drawableRight="@null"
+                    android:hint="已是最新版本" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/set_tv_help"
+                style="@style/info_item_bottom"
+                android:drawableRight="@drawable/arrow_right"
+                android:padding="10dp"
+                android:text="帮助与反馈" />
+
+            <TextView
+                android:id="@+id/set_tv_about"
+                style="@style/edittext_big"
+                android:drawableRight="@drawable/arrow_right"
+                android:text="关于互邀" />
+
+            <Button
+                android:id="@+id/set_btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_margin="10dp"
+                android:background="@drawable/selector_button_red"
+                android:text="注销登录"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textsize_button" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/thirdprefer_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/thirdprefer_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="@string/logthird_perfectcomplete" />
+    </RelativeLayout>
+
+  <RelativeLayout
+        android:id="@+id/thirdprefer_rl_info"
+        style="@style/info_item_single"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/thirdprefer_rl_title"
+        android:padding="2dp" >
+        <View
+            android:id="@+id/rege_line1"
+            style="@style/line_gray_h"
+            android:layout_below="@id/rege_label_pwd" />
+       <TextView
+            android:id="@+id/rege_label_name"
+            style="@style/textview_label"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rege_line1"
+            android:text="@string/label_nick" />
+        <com.whoyao.widget.ClearEditText
+            android:id="@+id/thirdlogin_et_nick"
+            style="@style/edittext_white"
+            android:layout_alignBaseline="@id/rege_label_name"
+            android:layout_below="@id/rege_line1"
+            android:layout_toRightOf="@id/rege_label_name"/>
+        <View
+            android:id="@+id/rege_line2"
+            style="@style/line_gray_h"
+            android:layout_below="@id/rege_label_name" />
+        <TextView
+            android:id="@+id/rege_label_sex"
+            style="@style/textview_label"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rege_line2"
+            android:text="@string/label_sex" />
+        <TextView
+            android:id="@+id/thirdprefer_tv_sex"
+            style="@style/edittext_white"
+            android:layout_alignBaseline="@+id/rege_label_sex"
+            android:layout_below="@id/rege_line2"
+            android:layout_toRightOf="@id/rege_label_sex"
+            android:hint="@string/hint_select_sex" />
+        <View
+            android:id="@+id/rege_line3"
+            style="@style/line_gray_h"
+            android:layout_below="@id/rege_label_sex" />
+        <TextView
+            android:id="@+id/rege_label_birthday"
+            style="@style/textview_label"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rege_line3"
+            android:text="@string/label_birthday_3" />
+        <TextView
+            android:id="@+id/thirdprefer_tv_birthday"
+            style="@style/edittext_white"
+            android:layout_alignBaseline="@+id/rege_label_birthday"
+            android:layout_toRightOf="@id/rege_label_birthday"
+            android:hint="@string/hint_select_birthday" />
+        <View
+            android:id="@+id/rege_line4"
+            style="@style/line_gray_h"
+            android:layout_below="@id/rege_label_birthday" />
+        <TextView
+            android:id="@+id/rege_label_addr"
+            style="@style/textview_label"
+            android:layout_alignLeft="@id/rege_label_birthday"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rege_line4"
+            android:text="@string/label_addr" />
+        <TextView
+            android:id="@+id/thirdprefer_tv_addr"
+            style="@style/edittext_white"
+            android:layout_alignBaseline="@+id/rege_label_addr"
+            android:layout_toRightOf="@id/rege_label_addr"
+            android:layout_below="@id/rege_line4"
+            android:hint="@string/hint_select_addr" />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/logthird_btn_commit"
+        style="@style/button_big"
+        android:layout_below="@id/thirdprefer_rl_info"
+        android:layout_marginTop="10dp"
+        android:text="@string/enter" />
+</RelativeLayout>

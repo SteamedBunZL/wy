@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="version_name">3.2.1</string>
+    <!-- 我的资金 -->
+    <string name="account_balance">账户余额</string>
+    <string name="recharge_balance">充值余额</string>
+    <string name="red_packet">红包</string>
+    <string name="number">编号</string>
+    <string name="weibosdk_demo_toast_auth_success">授权成功</string>
+    <string name="weibosdk_demo_toast_auth_failed">授权失败</string>
+    <!-- 设置 -->
+    <string name="app_name">互邀</string>
+    <string name="loading">数据加载中...</string>
+    <string name="addr_load_fail">获取地址失败,请稍后再试</string>
+    <string name="checking_update">正在检查更新...</string>
+    <!-- 界面显示文字 -->
+    <string name="login">登录</string>
+    <string name="login_QQ">&#160;&#160;QQ登录</string>
+    <string name="login_WeiBo">&#160;&#160;微博登录</string>
+    <string name="register">注册</string>
+    <string name="enter">确定</string>
+    <string name="commit">提交</string>
+    <string name="cancel">取消</string>
+    <string name="next">下一步</string>
+    <string name="has_operated">您已经操作过了</string>
+    <string name="cancel_success">取消成功</string>
+    <string name="home_page">首页</string>
+    <string name="register_account">注册账号</string>
+    <string name="register_phone">手机注册</string>
+    <string name="register_email">邮箱注册</string>
+    <string name="logthird_perfectcomplete">信息完善</string>
+    <string name="add_my_free">发闲人预告</string>
+    <string name="my_free">闲人预告</string>
+    <string name="resend">重新发送</string>
+    <string name="retrieve_pwd">找回密码</string>
+    <string name="retrieve_phone">手机找回密码</string>
+    <string name="retrieve_email">邮箱找回密码</string>
+    <string name="label_phone_number">手机号码：</string>
+    <string name="label_name_3">姓　名：</string>
+    <string name="label_name_4">姓　　名：</string>
+    <string name="label_realname">真实姓名：</string>
+    <string name="label_email">邮　箱：</string>
+    <string name="label_pwd">密　码：</string>
+    <string name="label_nick">昵　称：</string>
+    <string name="label_sex">性　别：</string>
+    <string name="label_birthday_3">生　日：</string>
+    <string name="label_birthday_4">生　　日：</string>
+    <string name="label_addr">所在地：</string>
+    <string name="label_event_price">活动费用：</string>
+    <string name="label_city">城市</string>
+    <string name="birthday">生日</string>
+    <string name="licence_agree">我已阅读并同意</string>
+    <string name="licence_title">《互邀用户服务条款》</string>
+    <string name="send_tome_vcode">向我发送验证码</string>
+    <string name="send_vcode">获取验证码</string>
+    <string name="user_info">用户信息</string>
+    <string name="user_nick">昵称</string>
+    <string name="user_tag">标签</string>
+    <string name="user_content">签名</string>
+    <string name="user_age">年龄</string>
+    <string name="user_sex">性别</string>
+    <string name="user_sex_man">男</string>
+    <string name="user_sex_woman">女</string>
+    <string name="user_height">身高</string>
+    <string name="user_weight">体重</string>
+    <string name="user_blood">血型</string>
+    <string name="user_moreinfo">更多资料</string>
+    <string name="user_warn_birthday_empty">请填写生日</string>
+    <string name="user_warn_name_wrong">姓名输入不正确</string>
+    <string name="user_warn_realname_wrong">姓名输入不正确</string>
+    <string name="user_warn_name_empty">请填写姓名，2-8个字</string>
+    <string name="user_warn_id_wrong">请填写正确的身份证号码</string>
+    <string name="user_warn_id_empty">请填写您的身份证号码</string>
+    <string name="user_warn_qq_wrong">请输入正确的QQ号</string>
+    <string name="user_warn_weixin_wrong">请输入正确的微信号</string>
+    <string name="user_warn_msn_wrong">请输入正确的MSN</string>
+    <string name="user_warn_weibo_wrong">请输入正确的微博地址</string>
+    <string name="user_setpwd">修改密码</string>
+    <string name="user_search_title">朋友搜索</string>
+    <string name="topic_find">找话题</string>
+    <string name="topic_add">发话题</string>
+    <string name="event_find">找活动</string>
+    <string name="venue_find">找场馆</string>
+    <string name="venue_title">场馆</string>
+    <string name="event_add">发活动</string>
+    <string name="invite_add">发邀请</string>
+    <string name="event_title">活动</string>
+    <string name="event_detial_title">活动详情</string>
+    <string name="event_add_title">发布活动</string>
+    <string name="event_search_title">活动搜索</string>
+    <string name="event_map_title">活动地图</string>
+    <string name="event_immediately">即时活动</string>
+    <string name="event_normal">普通活动</string>
+
+    <!-- 警告 -->
+    <string name="warn_network_unavailable">没有网络连接，\n请重新检查您的网络</string>
+    <string name="warn_netrequest_failure">网络连接异常，请稍后再试</string>
+    <string name="warn_no_sdcard">请插入SD卡!</string>
+    <string name="warn_account_empty">请输入用户名</string>
+    <string name="warn_account_formatwrong">用户名格式不正确</string>
+    <string name="warn_account_unregister">该用户名未注册</string>
+    <string name="warn_login_wrong">用户名或密码错误</string>
+    <string name="warn_login_phone_unregister">@string/warn_account_unregister</string>
+    <string name="warn_login_email_unregister">@string/warn_account_unregister</string>
+    <string name="warn_third_repeat">昵称重复啦,修改一下吧!</string>
+
+    <!-- <string name="code_warn_phone_registed">手机号已经注册过</string> -->
+    <!-- <string name="code_remind_phone">请输入正确的手机号</string> -->
+    <!-- <string name="warn_smscode_over5times">您已获取过 5 次验证码，今天不能再获取啦！</string> -->
+    <string name="warn_code_empty">请输入验证码</string>
+    <string name="smscode_resend">已重新发送</string>
+    <string name="warn_code_formatwrong">@string/warn_code_wrong</string>
+    <string name="warn_code_wrong">输入的验证码有误，请重新输入</string>
+    <string name="warn_code_timeout">您输入的验证码已过期，请重新获取验证码！</string>
+    <string name="warn_phone_empty">请输入手机号</string>
+    <string name="warn_phone_formatwrong">请输入正确的手机号</string>
+    <string name="warn_phone_unregister">该手机号尚未注册</string>
+    <string name="warn_phone_registered">该手机号已被注册</string>
+    <string name="warn_phone_duplicate">新手机号不能与原手机号相同</string>
+    <string name="warn_phone_over5times">您已获取过 5 次验证码，今天不能再获取了</string>
+    <!-- <string name="warn_retrieve_phone_unregister">您的手机未注册，请检查是否拼写错误，如需注册，请点击注册</string> -->
+
+    <string name="warn_email_empty">请输入邮箱</string>
+    <string name="warn_email_formatwrong">请输入正确的邮箱</string>
+    <string name="warn_email_unregister">该邮箱尚未注册</string>
+    <string name="warn_email_registered">该邮箱已被注册</string>
+    <string name="warn_email_duplicate">新邮箱不能与原邮箱相同</string>
+    <string name="warn_email_over5times">同一邮箱每天只有5次找回机会</string>
+    <string name="warn_realname_empty">请输入真实姓名</string>
+    <string name="warn_nick_registered">这个昵称已经有人用啦，换一个试试</string>
+    <string name="warn_nick_empty">请输入昵称</string>
+    <string name="warn_nick_formatwrong">昵称格式不正确，请输入4-20位字符，支持中文、英文、数字、  “—”和“_” ”</string>
+    <!--
+         <string name="warn_nick_toshort">昵称过短，请输入4-20个字符</string>
+    <string name="warn_nick_tolong">昵称过长，请输入4-20个字符</string>
+    -->
+
+    <string name="warn_pwd_empty">请输入密码</string>
+    <string name="warn_pwd_formatwrong">密码格式不正确，请输入6-16位数字、字母或常用符号，不能单独使用一种</string>
+    <string name="warn_pwd_formatwrong2">密码格式不正确，请输入6-16位数字、字母或常用符号</string>
+    <string name="warn_pwd_new_formatwrong">新密码格式不正确，请输入6-16位数字、字母或常用符号</string>
+    <string name="warn_pwd_new_empty">请输入新密码</string>
+    <string name="warn_pwd_old_empty">请输入原密码</string>
+    <string name="warn_pwd_old_wrong">原密码错误</string>
+    <string name="warn_pwd_reset_success">密码修改成功，请重新登录</string>
+    <!--
+    <string name="warn_pwd_tolong">密码过长，请输入6-16个字符</string>
+    <string name="warn_pwd_toshort">密码过短，请输入6-16个字符</string>
+    -->
+
+    <string name="warn_register_licence">请确认是否已经阅读《互邀用户服务条款》</string>
+    <!-- <string name="warn_register_licence">请阅读并同意服务条款后继续注册</string> -->
+
+    <string name="warn_tag_full">兴趣标签最多10个</string>
+
+    <!-- 年龄范围 -->
+    <string name="user_age_0_18">18岁以下</string>
+    <string name="user_age_18_25">18-25岁</string>
+    <string name="user_age_25_28">25-28岁</string>
+    <string name="user_age_28_32">28-32岁</string>
+    <string name="user_age_32_35">32-35岁</string>
+    <string name="user_age_35_38">35-38岁</string>
+    <string name="user_age_38_45">38-45岁</string>
+    <string name="user_age_45_100">45岁以上</string>
+
+    <!-- Hint提示 -->
+    <!-- 用户 -->
+    <string name="hint_input">请填写</string>
+    <string name="hint_select">请选择</string>
+    <string name="hint_account">邮箱或手机号</string>
+    <string name="hint_input_phone">@string/warn_phone_empty</string>
+    <string name="hint_input_email">请输入常用邮箱</string>
+    <string name="hint_input_email_retrieve">请输入邮箱，用于找回密码</string>
+    <string name="hint_input_pwd">请输入密码</string>
+    <string name="hint_input_pwd_register">6-16位数字、字母或字符</string>
+    <string name="hint_input_pwd_retrieve">@string/hint_input_pwd_register</string>
+    <string name="hint_input_nick">4-20位字符</string>
+    <string name="hint_input_realname">@string/warn_realname_empty</string>
+    <string name="hint_input_code">请输入验证码</string>
+    <string name="hint_select_sex">请选择性别</string>
+    <string name="hint_select_birthday">请选择生日</string>
+    <string name="warn_birthday_empty">@string/hint_select_birthday</string>
+    <string name="hint_select_addr">请选择所在地</string>
+    <string name="hint_register_phone">@string/hint_input_phone</string>
+    <string name="hint_search">搜索点内容吧...</string>
+    <string name="hint_other_content">TA还没有写签名</string>
+    <string name="hint_other_tag">TA还没有添加标签</string>
+    <string name="hint_other_name">TA还没有填写哦</string>
+
+    <!-- 发活动 -->
+    <string name="hint_addr_desc">添加详细信息，例如门牌号，限20字</string>
+    <string name="hint_event_type_select">请选择活动类型</string>
+    <string name="warn_event_type_empty">@string/hint_event_type_select</string>
+    <string name="hint_event_title">2-20个字</string>
+    <string name="warn_event_title_empty">请输入活动名称</string>
+    <string name="warn_event_title_formatewrong">活动名称为2-20个字</string>
+    <string name="hint_event_begintime">请选择开始时间</string>
+    <string name="warn_event_begintime_empty">@string/hint_event_begintime</string>
+    <string name="hint_event_endtime">请选择结束时间</string>
+    <string name="warn_event_endtime_empty">@string/hint_event_endtime</string>
+    <string name="hint_event_addr">请输入活动地址</string>
+    <string name="warn_event_addr_empty">@string/hint_event_addr</string>
+    <string name="warn_event_addr_tolong">活动地址在50个字以内</string>
+    <string name="hint_event_num">除发布者之外需要的人数</string>
+    <string name="warn_event_num_empty">请输入活动人数</string>
+    <string name="hint_event_price">0元为免费</string>
+    <string name="warn_event_price_empty">请输入人均费用</string>
+    <string name="warn_event_price_formatewrong">人均费用范围在0-999元</string>
+    <string name="hint_event_paytype">请选择支付方式</string>
+    <string name="warn_event_paytype_empty">@string/hint_event_paytype</string>
+    <string name="hint_event_keyword">2-8个字，最多5个，空格隔开</string>
+    <string name="warn_event_keyword_empty">请填写关键字</string>
+    <string name="warn_event_keyword_toomuch">关键字最多只能填写5个</string>
+    <string name="warn_event_keyword_toolong">每个关键字为2-8个字</string>
+    <string name="hint_event_desc">请输入活动描述</string>
+    <string name="warn_event_desc_empty">@string/hint_event_desc</string>
+    <string name="warn_event_desc_formatewrong">活动描述为15-500个字</string>
+    <string name="warn_event_bill_empty">请上传活动海报</string>
+    <string name="warn_event_bill_toobig">请上传小于5M的图片</string>
+    <string name="warn_event_bill_formatewrong">图片仅支持JPG、PNG和GIF格式</string>
+    <string name="warn_event_busy">你这段时间已有其他活动</string>
+    <string name="warn_event_add_success">发布成功</string>
+    <string name="warn_event_join_full">很抱歉，该活动人数已满</string>
+    <string name="warn_event_join_unavailable">很抱歉，该活动已不能报名</string>
+    <string name="warn_event_join_time_conflict">该时间段您已参加活动</string>
+    <string name="warn_event_join_notmeet">您不符合该活动设置的报名条件</string>
+    <string name="warn_event_join_failure">报名失败</string>
+    <string name="warn_event_join_over2times">@string/warn_event_join_failure</string>
+    <string name="warn_event_interested">@string/has_operated</string>
+    <string name="warn_event_unjoinsuccess">@string/cancel_success</string>
+
+</resources>

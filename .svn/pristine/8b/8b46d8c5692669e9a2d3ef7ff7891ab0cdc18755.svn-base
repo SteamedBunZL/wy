@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rete_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:drawableRight="@drawable/selector_triangle"
+            android:text="我的订单" />
+    </RelativeLayout>
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_my_bill_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rete_rl_title"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:headerDividersEnabled="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false" />
+
+    <LinearLayout
+        android:id="@+id/site_pop_type"
+        android:layout_width="@dimen/pop_area_right_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rete_rl_title"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/xialas"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/mybill_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="我的订单"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/waitpay_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="待支付"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/closed_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="已取消"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/overdate_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="已过期"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+     <!--    <TextView
+            android:id="@+id/appling_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="退款申请中"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:id="@+id/getpay_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="已退款"
+            android:textSize="@dimen/textsize_text" /> -->
+
+        <TextView
+            android:id="@+id/success_tv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="已成功"
+            android:textSize="@dimen/textsize_text" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/event_search_line"
+        android:gravity="center"
+        android:text="很抱歉，没有您想要的结果"
+        android:visibility="invisible" />
+
+</RelativeLayout>

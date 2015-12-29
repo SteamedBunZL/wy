@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="邀请好友" />
+
+       <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/selector_button_smalt"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:text="发送"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_e4"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/rl_check_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/selector_radius_white_gary"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/textsize_text"
+                android:text="我的好友" />
+
+            <TextView
+                android:id="@+id/cb_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:button="@null"
+                android:drawableRight="@drawable/selector_checkbox_carmine" />
+        </RelativeLayout>
+
+        <handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/ll_invite_friend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp"
+            android:fadingEdge="none"
+            android:headerDividersEnabled="true"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollingCache="false" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="场馆详情" />
+
+        <ImageButton
+            android:id="@+id/page_btn_right"
+            style="@style/page_backbtn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_button_more_info" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/venue_detial_ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_80"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp" >
+
+        <Button
+            android:id="@+id/venue_detial_btn_accounts"
+            style="@style/event_detial_bottom_button"
+            android:layout_height="@dimen/item_height"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/selector_button_orange"
+            android:text="去购物车结算"
+            android:enabled="false"
+            android:textColor="@drawable/selector_color_white_gray"
+            android:textSize="@dimen/textsize_button" />
+
+        <RelativeLayout
+            android:id="@+id/venue_detial_rl_cart"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/item_height"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/rectangle_radius_white" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/btn_mart"
+                android:textSize="@dimen/textsize_text" />
+
+            <TextView
+                android:id="@+id/venue_detial_tv_place_num"
+                style="@style/textview_superscript"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="3dp"
+                android:layout_marginTop="3dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/venue_detial_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/venue_detial_ll_bottom"
+        android:layout_below="@id/page_rl_title"
+        android:background="@android:color/transparent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        android:headerDividersEnabled="true" />
+   
+
+</RelativeLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingBottom="10dp" >
+
+    <View style="@style/line_gray_h" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_sub_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/cart_sub_tv_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/infilling_time" />
+
+        <TextView
+            android:id="@+id/cart_sub_tv_total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red_text"
+            android:singleLine="true"
+            android:text="45￥ " />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/cart_sub_tv_type_detial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="室内 " />
+
+        <TextView
+            android:id="@+id/cart_sub_tv_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:singleLine="true"
+            android:text="￥45" />
+
+        <TextView
+            android:id="@+id/cart_sub_tv_count"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="@dimen/item_sub_height"
+            android:gravity="center"
+            android:background="@drawable/selector_picker_text_background"
+            android:textSize="@dimen/textsize_button" />
+
+
+        <TextView
+            android:id="@+id/cart_sub_tv_remaind"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:singleLine="true"
+            android:paddingLeft="5dp"
+            android:visibility="invisible"
+            android:textColor="@color/red_text"
+            android:text="剩999块" />
+
+        <Button
+            android:id="@+id/cart_sub_btn_del"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="@dimen/item_sub_height"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/selector_button_orange"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="删除"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>

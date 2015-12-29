@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+    
+<RelativeLayout
+        android:id="@+id/page_title"
+        style="@style/page_titlebar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            style="@style/page_backbtn" 
+            android:id="@+id/page_btn_back" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:maxEms="12"
+            android:text="回复话题" />
+    </RelativeLayout>
+
+<EditText
+    android:id="@+id/topic_remark_et_content"
+    android:layout_below="@id/page_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:paddingTop="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="20dp"
+    android:gravity="left|top"
+    android:minLines="5"
+    android:textSize="@dimen/textsize_eidt"
+    android:background="@drawable/rectangle_radius_white" >
+</EditText>
+
+<TextView
+    android:id="@+id/topic_remark_tv_num"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@id/topic_remark_et_content"
+    android:layout_alignRight="@id/topic_remark_et_content"
+    android:layout_margin="5dp"
+    android:textColor="@color/gray_text"
+    android:text="0/250" />
+
+<Button
+    android:id="@+id/topic_remark_btn_enter"
+    style="@style/button_big"
+    android:layout_below="@+id/topic_remark_et_content"
+    android:text="回复" />
+
+</RelativeLayout>

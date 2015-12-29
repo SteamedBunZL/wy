@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topic_search_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="话题搜索" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/topic_search_ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topic_search_title"
+        android:background="@android:color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_round_gray"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <EditText
+                android:id="@+id/topic_search_et_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:drawableLeft="@drawable/search_icon"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize_eidt" />
+
+            <ImageView
+                android:id="@+id/topic_search_iv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/selector_clear_white"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/topic_search_tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_round_blue_active"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_eidt"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/topic_search_line"
+        style="@style/line_gray_stroke_h"
+        android:layout_height="1dp"
+        android:layout_below="@+id/topic_search_ll_1" />
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/topic_search_lv_2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/topic_search_line"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+    <View
+        android:id="@+id/topic_search_shadow_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/topic_search_ll_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topic_search_ll_search"
+        android:background="@color/gray_e8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp" >
+
+        <LinearLayout
+            android:id="@+id/topic_search_ll_type"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/topic_search_tv_type"
+                style="@style/event_search_filter_text"
+                android:text="标签" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/topic_search_ll_price"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/topic_search_tv_price"
+                style="@style/event_search_filter_text"
+                android:text="最新回复 " />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topic_search_ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/topic_search_ll_0"
+        android:background="@color/gray_e8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" >
+    </LinearLayout>
+
+   <!--  <View
+        android:id="@+id/topic_search_shadow_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/topic_search_ll_0"
+        android:layout_marginBottom="3dp"
+        android:background="@color/black_80"
+        android:visibility="gone" /> -->
+
+  <!--   <View
+        android:id="@+id/topic_search_shadow_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/topic_search_ll_1"
+        android:layout_alignTop="@id/topic_search_ll_1"
+        android:layout_marginTop="3dp"
+        android:background="@color/black_80"
+        android:visibility="gone" /> -->
+
+    <GridView
+        android:id="@+id/topic_search_gv_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topic_search_ll_0"
+        android:background="@drawable/main_dropdown_list_bkg_left"
+        android:fadingEdge="none"
+        android:numColumns="3"
+        android:visibility="gone" />
+
+    
+   
+    <LinearLayout
+        android:id="@+id/topic_search_pop_price"
+        android:layout_width="@dimen/pop_item_width1"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topic_search_ll_1"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/main_dropdown_list_bkg_center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+       
+
+        <TextView
+            android:id="@+id/topic_search_price_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="最新发布"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/topic_search_price_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="最新回复"
+            android:textSize="@dimen/textsize_text" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/event_search_line"
+        android:gravity="center"
+        android:visibility="invisible" />
+
+</RelativeLayout>

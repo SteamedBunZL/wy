@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rete_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="参与人员" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:drawableLeft="@drawable/flag"
+        android:text="发起人"
+        android:textColor="@color/carmine_text"
+        android:textSize="@dimen/textsize_text" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/event_joiner_iv_face"
+            android:layout_width="@dimen/image_height"
+            android:layout_height="@dimen/image_height"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/default_face"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/event_joiner_tv_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/event_joiner_iv_face"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:id="@+id/event_joiner_tv_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/event_joiner_tv_nick"
+            android:layout_toRightOf="@+id/event_joiner_iv_face"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/textsize_subtext" />
+
+        <TextView
+            android:id="@+id/event_joiner_tv_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_below="@id/event_joiner_tv_sex"            
+            android:layout_toRightOf="@+id/event_joiner_iv_face"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/textsize_subtext" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/partner"
+            android:text="参与人数("
+            android:textColor="@color/carmine_text"
+            android:textSize="@dimen/textsize_text" />
+        <TextView
+            android:id="@+id/event_joiner_tv_joinnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/carmine_text"
+            android:textSize="@dimen/textsize_text" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/"
+            android:textColor="@color/carmine_text"
+            android:textSize="@dimen/textsize_text" />
+        <TextView
+            android:id="@+id/event_joiner_tv_maxnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/carmine_text"
+            android:textSize="@dimen/textsize_text" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=")"
+            android:textColor="@color/carmine_text"
+            android:textSize="@dimen/textsize_text" />
+        
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/event_joiner_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:numColumns="4" />
+</LinearLayout>

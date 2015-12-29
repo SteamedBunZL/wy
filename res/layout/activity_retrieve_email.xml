@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rete_rl_title"
+        style="@style/page_titlebar" >
+        <Button
+            android:id="@+id/rete_btn_back"
+            style="@style/page_backbtn" />
+        <TextView
+            style="@style/page_title"
+            android:text="@string/retrieve_email" />
+    </RelativeLayout>
+    
+	<TextView 
+	    android:id="@+id/rete_tv_title"
+	    android:layout_below="@id/rete_rl_title"
+	    android:layout_margin="10dp"
+	    android:paddingLeft="10dp"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text="通过电子邮件重设密码" />
+	
+	<TextView 
+	    android:id="@+id/rete_tv_desc"
+	    android:layout_below="@id/rete_tv_title"
+	    android:layout_marginLeft="20dp"
+	    android:layout_marginRight="10dp"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:hint="输入您注册时的电子邮箱，我们会将重置链接发送到您的电子邮箱" />
+
+    <!-- <EditText
+        android:id="@+id/rete_et_email"
+        style="@style/edittext_big"
+        android:layout_below="@+id/rete_tv_desc"
+        android:ems="10"
+        android:hint="@string/hint_input_email"
+        android:imeOptions="actionGo"
+        android:inputType="textEmailAddress" /> -->
+    <com.whoyao.widget.ClearEditText
+        android:id="@+id/rete_et_email"
+        style="@style/edittext_big"
+        android:layout_below="@+id/rete_tv_desc"
+        android:ems="10"
+        android:hint="@string/hint_input_email_retrieve"
+        android:imeOptions="actionGo"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/rete_btn_sendemail"
+        android:layout_below="@id/rete_et_email"
+        android:layout_marginTop="10dp"
+        style="@style/button_big"
+        android:text="确定" />
+    
+    <Button
+        android:id="@+id/rete_btn_phone"
+        style="@style/button_big"
+        android:background="@drawable/rectangle_radius_carmine"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:text="@string/retrieve_phone" />
+
+
+
+</RelativeLayout>

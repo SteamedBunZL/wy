@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attr="http://schemas.android.com/apk/res/com.whoyao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="@string/app_name" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_rl_bottom"
+        android:layout_below="@id/page_rl_title" >
+
+        <ScrollView
+            android:id="@+id/main_test_sc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <com.whoyao.widget.HorizontalPicker
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:text="a6"
+                    android:gravity="center"
+                    android:background="@null"/>
+                
+                <com.whoyao.widget.DrawableCenterTextView
+                    android:id="@+id/dctv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableLeft="@drawable/selector_minus"
+                    android:drawableRight="@drawable/selector_plus"
+                    android:text="a6"
+                    android:gravity="center"
+                     />
+                <Button
+                    android:id="@+id/button200"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:text="测试1" />
+
+                <View
+                    android:id="@+id/imageView1"
+                    style="@style/line_dash_gray_h" />
+				
+                <Button
+                    android:id="@+id/button400"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:textSize="14.5sp"
+                    android:text="测试2" />
+
+                <Button
+                    android:id="@+id/test_btn_sendvcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:text="测试3" />
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="horizontal" >
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:text="15 "
+        android:textSize="15sp" />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:text="14.5 "
+        android:textSize="14.5sp" />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:text="14 "
+        android:textSize="14sp" />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+        android:text="default" />
+</LinearLayout>
+                <Button
+                    android:id="@+id/test_btn_checkvcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:text="CheckVCode" />
+
+                <Button
+                    android:id="@+id/test_btn_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:text="自动登录" />
+
+                <Button
+                    android:id="@+id/test_btn_checkaccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:text="CheckAccount" />
+
+                <Button
+                    android:id="@+id/test_btn_checkupdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:text="CheckUpdate" />
+
+                <Button
+                    android:id="@+id/test_btn_regist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:text="Regist" />
+
+                <Button
+                    android:id="@+id/test_btn_loginact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:text="登录界面" />
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+</RelativeLayout>

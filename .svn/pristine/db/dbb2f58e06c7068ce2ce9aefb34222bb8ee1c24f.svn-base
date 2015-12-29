@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/rectangle_radius_white"
+        android:minWidth="280dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="操作提示"
+            android:textColor="@color/carmine_button"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_h" />
+
+        <com.whoyao.widget.HorizontalPicker
+            android:id="@+id/dialog_picker"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_sub_height"
+            android:minWidth="100dp"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:background="@null"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:textSize="@dimen/textsize_button"
+            android:text="1"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/dialog_left"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_button_blue"
+                android:minWidth="70dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:text="LeftButton"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textsize_text"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/dialog_right"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_button_blue"
+                android:minWidth="70dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:text="LeftButton"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textsize_text"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

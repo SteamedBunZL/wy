@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_radius_white"
+    android:paddingBottom="6dp" >
+
+    <RelativeLayout
+        android:id="@+id/rl_image"
+        android:layout_width="80dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/iv_message_invite_head"
+            android:layout_width="@dimen/image_face_width"
+            android:layout_height="@dimen/image_height"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/default_user_face" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_message_invite_name"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_toRightOf="@id/rl_image"
+        android:singleLine="true"
+        android:text="天下大同"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/tv_message_invite_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_message_invite_name"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/rl_image"
+        android:singleLine="false"
+        android:text="周末出去玩吧？"
+        android:textSize="@dimen/textsize_subtext" />
+
+    <TextView
+        android:id="@+id/tv_message_invite_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="13dp"
+        android:text="3.5 18:00"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/textsize_text" />
+
+</RelativeLayout>

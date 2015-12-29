@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+        <RelativeLayout
+        android:id="@+id/regpi_rl_title"
+        style="@style/page_titlebar" >
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+        <TextView
+            style="@style/page_title"
+            android:text="活动相册" />
+        <Button
+            android:id="@+id/event_album_btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/camera" />
+    </RelativeLayout>
+	<GridView
+	    android:id="@+id/event_album_gv"
+	    android:numColumns="2"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:paddingTop="10dp"
+	    android:horizontalSpacing="10dp"
+	    android:verticalSpacing="10dp"
+	    android:scrollbarStyle="outsideOverlay"
+	    android:gravity="center_horizontal"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" />
+</LinearLayout>

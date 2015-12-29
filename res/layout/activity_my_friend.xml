@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <ImageButton
+            android:id="@+id/page_btn_right"
+            style="@style/page_backbtn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_button_user_addfriend" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:drawableRight="@drawable/selector_triangle"
+            android:text="我的好友" />
+    </RelativeLayout>
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/my_friend_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/page_rl_title"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+	<View
+        android:id="@+id/my_friend_shadow"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:background="@android:color/transparent"
+	    android:visibility="gone" />
+    <LinearLayout
+        android:id="@+id/my_friend_pop_type"
+        android:layout_width="@dimen/pop_area_right_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/page_rl_title"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/xialas"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/my_friend_type_friend"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="我的好友"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/my_friend_type_free"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="空闲好友"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/my_friend_type_event"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="活动过的人"
+            android:textSize="@dimen/textsize_text" />
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/my_friend_type_favorite"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="收藏的人"
+            android:textSize="@dimen/textsize_text" />
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/my_friend_type_black"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="黑名单"
+            android:textSize="@dimen/textsize_text" />
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/my_friend_type_tag"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="共同标签"
+            android:textSize="@dimen/textsize_text" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/regpcc_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/regpcc_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="@string/register_phone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/regpcc_tv_inputcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/regpcc_rl_title"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="请输入收到的短信验证码：" />
+    <!--
+    <EditText
+        android:id="@+id/regpcc_et_code"
+        android:layout_below="@id/regpcc_tv_inputcode"
+        style="@style/edittext_big"
+        android:imeOptions="actionGo"
+        android:hint="请输入验证码"
+        android:inputType="phone" >
+		
+        <requestFocus />
+    </EditText>
+    -->
+    <!--
+         <com.whoyao.ui.ClearableEdittext
+	    android:id="@+id/regpcc_et_code"
+        android:layout_below="@id/regpcc_tv_inputcode"
+        style="@style/edittext_big"
+        android:imeOptions="actionGo"
+        android:hint="@string/hint_input_code"
+        android:inputType="phone" />
+    -->
+
+    <com.whoyao.widget.ClearEditText
+        android:id="@+id/regpcc_et_code"
+        style="@style/edittext_big"
+        android:layout_below="@id/regpcc_tv_inputcode"
+        android:hint="@string/hint_input_code"
+        android:imeOptions="actionGo"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/regpcc_btn_next"
+        style="@style/button_big"
+        android:layout_below="@id/regpcc_et_code"
+        android:layout_marginTop="10dp"
+        android:text="@string/next" />
+
+<!--         android:layout_width="180dp"
+        android:background="@drawable/selector_round_btn_carmine"
+        android:padding="10dp"
+        android:layout_height="wrap_content" -->
+    <Button
+        android:id="@+id/regpcc_btn_resendcode"
+        style="@style/button_resend_sms"
+        android:layout_below="@id/regpcc_btn_next" />
+
+</RelativeLayout>

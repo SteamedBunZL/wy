@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_gravity="top" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="活动评分" />
+    </RelativeLayout>
+    <!--  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/page_rl_title"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/event_valu_title"
+            android:text="活动氛围" />
+
+        <Gallery
+            android:id="@+id/event_valu_gl_atmo"
+            style="@style/event_valu_gallery" />
+
+        <TextView
+            android:id="@+id/event_valu_tv_atmo"
+            style="@style/event_valu_disc" />
+
+        <!--  -->
+
+        <TextView
+            style="@style/event_valu_title"
+            android:text="人员出席" />
+
+        <Gallery
+            android:id="@+id/event_valu_gl_attend"
+            style="@style/event_valu_gallery" />
+
+        <TextView
+            android:id="@+id/event_valu_tv_attend"
+            style="@style/event_valu_disc" />
+
+        <TextView
+            style="@style/event_valu_title"
+            android:text="活动费用" />
+
+        <Gallery
+            android:id="@+id/event_valu_gl_price"
+            style="@style/event_valu_gallery" />
+
+        <TextView
+            android:id="@+id/event_valu_tv_price"
+            style="@style/event_valu_disc" />
+
+        <TextView
+            style="@style/event_valu_title"
+            android:text="活动环境" />
+
+        <Gallery
+            android:id="@+id/event_valu_gl_addr"
+            style="@style/event_valu_gallery" />
+
+        <TextView
+            android:id="@+id/event_valu_tv_addr"
+            style="@style/event_valu_disc" />
+
+        <Button
+            android:id="@+id/event_valu_btn_enter"
+            style="@style/button_big"
+            android:layout_marginTop="10dp"
+            android:text="@string/commit" />
+    </LinearLayout>
+
+</RelativeLayout>

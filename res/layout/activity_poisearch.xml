@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/retp_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_search" />
+
+        <AutoCompleteTextView
+            android:id="@+id/searchkey"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:layout_toLeftOf="@id/search"
+            android:imeOptions="actionSearch"
+            android:layout_toRightOf="@id/page_btn_back"
+            android:background="@drawable/rectangle_round_white"
+            android:drawableLeft="@drawable/search_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+       <TextView 
+            android:id="@+id/tvBackMyLoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/position"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+           />
+    </RelativeLayout>
+
+</LinearLayout>

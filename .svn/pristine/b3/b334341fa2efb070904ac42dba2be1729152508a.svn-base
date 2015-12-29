@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_radius_white"
+    >
+    <TextView 
+        android:id="@+id/invite_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[聚餐]周日美食坊蛋羔制作蛋羹"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="@dimen/textsize_text"
+        />
+    <TextView 
+        android:id="@+id/invite_send_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_subtext"
+        android:text="受邀人"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/gray_text"
+        android:layout_below="@id/invite_title"
+        />
+    <TextView 
+        android:id="@+id/invite_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_subtext"
+        android:text="邀请时间"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/gray_text"
+        android:layout_below="@id/invite_send_person"
+        />
+     <TextView 
+        android:id="@+id/invite_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_subtext"
+        android:text="状态：已接受"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp"
+        android:textColor="@color/gray_text"
+        android:layout_below="@id/invite_time"
+        />
+     <TextView 
+         android:id="@+id/invite_new"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentRight="true"
+         android:text="new"
+         android:layout_centerVertical="true"
+         android:layout_marginRight="20dp"
+         android:visibility="invisible"
+         />
+    
+    
+    
+
+</RelativeLayout>

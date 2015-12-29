@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle_radius_white"
+    android:paddingBottom="3dp" 
+    android:descendantFocusability="blocksDescendants"
+    >
+        <ImageView
+            android:id="@+id/iv_inform_head"
+            android:layout_width="@dimen/image_face_width"
+            android:layout_height="@dimen/image_height"
+            android:layout_centerVertical="true"
+            android:layout_margin="5dp"
+            android:src="@drawable/default_user_face" />
+
+
+    <TextView
+        android:id="@+id/tv_inform_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/iv_inform_head"
+        android:singleLine="true"
+        android:text="好友请求"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/tv_inform_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_inform_title"
+        android:layout_marginTop="6dp"
+        android:layout_toRightOf="@id/iv_inform_head"
+        android:singleLine="false"
+        android:text="想个昵称好难"
+        android:textSize="@dimen/textsize_subtext" />
+
+    <TextView
+        android:id="@+id/tv_message_inform_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="13dp"
+        android:text="3.5 18:00"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/textsize_subtext" />
+
+    <Button
+        android:id="@+id/btn_inform_disagree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/tv_inform_name"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/selector_button_blue"
+        android:padding="5dp"
+        android:text="忽略"
+        android:visibility="visible"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textsize_button" />
+
+    <Button
+        android:id="@+id/btn_inform_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_inform_name"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@id/btn_inform_disagree"
+        android:background="@drawable/selector_button_blue"
+        android:padding="5dp"
+        android:text="同意"
+        android:textColor="@android:color/white"
+        android:visibility="visible"
+        android:textSize="@dimen/textsize_button" />
+    <TextView 
+        android:id="@+id/tv_inform_notice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_inform_name"
+		android:textSize="@dimen/textsize_subtext"
+		android:textColor="@color/gray_text"
+		android:layout_alignParentRight="true"
+		android:text="已加好友"
+		android:layout_marginRight="10dp"
+		android:visibility="visible"
+        />
+
+</RelativeLayout>

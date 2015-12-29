@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_radius_white"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/mybill_venuename_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="丰和羽毛球馆"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/mybill_arrow_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/arrow_right" />
+
+    <TextView
+        android:id="@+id/mybill_ordermoney_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/mybill_arrow_tv"
+        android:text="680元" />
+
+    <TextView
+        android:id="@+id/mybill_ordernumber_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mybill_venuename_tv"
+        android:text="100037035"
+        android:textSize="@dimen/textsize_subtext" />
+
+    <TextView
+        android:id="@+id/mybill_ordertime_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mybill_venuename_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/mybill_ordernumber_tv"
+        android:text="2013.4.22"
+        android:textSize="@dimen/textsize_subtext" />
+
+    <TextView
+        android:id="@+id/mybill_orderstate_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mybill_ordermoney_tv"
+        android:layout_toLeftOf="@id/mybill_arrow_tv"
+        android:text="待支付"
+        android:textSize="@dimen/textsize_subtext" />
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="gray_background">#F0F0F0</color>
+    <color name="gray_stroke">#DCDCDC</color>
+    <color name="gray_text">#969696</color>
+    <color name="gray_header">#696969</color>
+    <color name="gray_hover">#EBEBEB</color>
+    <color name="gray_c8">#C8C8C8</color>
+    <color name="gray_e8">#E8E8EB</color>
+    <color name="gray_e4">#E4E4E4</color>
+    
+    <color name="smalt_titlebar">#1B3F59</color>
+    <color name="smalt_button">#14486E</color>
+    <color name="smalt_button_hover">#0E283B</color>
+    
+    
+    <color name="blue_button">#2DABE0</color>
+    <color name="blue_button_hover">#409CC7</color>
+    <color name="blue_text">#3B9AC6</color>
+    <color name="blue_bar">#829DA9</color>
+    <color name="blue_green">#13C7AF</color>
+    
+    <color name="carmine_text">#C83361</color>
+    <color name="carmine_button">#E85DB0</color>
+    <color name="carmine_button_hover">#CC529B</color>
+    
+    <color name="third_button_weibo">#f74d4d</color>
+    <color name="third_button_weibo_hover">#c13838</color>
+    <color name="third_button_qq">#5293cf</color>
+    <color name="third_button_qq_hover">#366999</color>
+    
+    <color name="red">#FD1414</color>
+    <color name="red_background">#9D4C4C</color>
+    <color name="red_text">#F33838</color>
+    
+    <color name="green_text">#68BF6C</color>
+    
+    <color name="yellow_bg">#FFFFBD</color>
+    <color name="yellow_text">#F28D33</color>
+    
+    <color name="orange_button">#F88600</color>
+    <color name="orange_hover">#DD7700</color>
+    
+    <color name="black_t">#A0000000</color>
+    <color name="black_80">#80000000</color>
+    
+    <color name="tag_red">#F87B7B</color>
+    <color name="tag_blue">#4FABD5</color>
+    <color name="tag_green">#13C7AF</color>
+    
+    <!-- <color name="tag_0">#FA8072</color>
+	<color name="tag_1">#4682B4</color>
+	<color name="tag_2">#FFA500</color>
+	<color name="tag_3">#D2691E</color>
+	<color name="tag_4">#20B2AA</color>
+	<color name="tag_5">#3CB371</color> -->
+</resources>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/more_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/more_title_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="@string/user_moreinfo" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/more_ll_name"
+                android:background="@drawable/rectangle_radius_white_top"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                style="@style/info_item_top" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="姓名" />
+
+                <EditText
+                    android:id="@+id/more_tv_name"
+                    android:textSize="@dimen/textsize_text"
+                    android:textColor="@color/blue_text"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:background="@null"
+                    android:hint="请填写" />
+                <ImageView
+                    android:id="@+id/more_iv_name"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/edit_pen" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_ll_unhonesty"
+                android:layout_marginBottom="-1dp"
+                style="@style/info_item_bottom" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="身份认证" />
+
+                <TextView
+                    style="@style/info_item_content"
+                    android:singleLine="false"
+                    android:id="@+id/more_tv_unhonesty"
+                    android:hint="@string/identity_unauthorized"
+                    android:textColor="@color/red_text" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/more_ll_honesty"
+                android:layout_marginBottom="-1dp"
+                android:visibility="gone"
+                style="@style/info_item_bottom" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="身份认证" />
+
+                <TextView
+                    android:id="@+id/more_tv_honesty"
+                    style="@style/info_item_content"
+                    android:drawableRight="@drawable/selector_arrow"
+                    android:textColor="@color/blue_green"
+                    android:text="已认证" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_ll_honesty_realname"
+                android:visibility="gone"
+                style="@style/info_item_middle" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/blue_green"
+                    android:text="真实姓名" />
+
+                <TextView
+                    android:id="@+id/more_tv_honesty_realname"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/blue_green" />
+                <TextView
+                    style="@style/info_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_ll_honesty_idnumber"
+                android:visibility="gone"
+                style="@style/info_item_middle" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/blue_green"
+                    android:text="身份证号" />
+
+                <TextView
+                    android:id="@+id/more_tv_honesty_idnumber"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/blue_green" />
+                <TextView
+                    style="@style/info_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_ll_honesty_time"
+                style="@style/info_item_bottom"
+                android:visibility="gone"
+                android:layout_marginBottom="0dp" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/blue_green"
+                    android:text="认证时间" />
+
+                <TextView
+                    android:id="@+id/more_tv_honesty_time"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="right|center_vertical"
+                    android:textColor="@color/blue_green" />
+                <TextView
+                    style="@style/info_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_ll_mobile"
+                style="@style/info_item_top" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="手机" />
+
+                <TextView
+                    android:id="@+id/more_tv_mobile"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    style="@style/info_item_content"
+                    android:drawableRight="@null" />
+                <TextView
+                    android:id="@+id/more_tv_mobile_edit"
+                    style="@style/info_item_content"
+  					android:layout_width="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_ll_email"
+                style="@style/info_item_bottom"
+                android:layout_marginBottom="0dp" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="邮箱" />
+
+                <TextView
+                    android:id="@+id/more_tv_email"
+                    style="@style/info_item_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:drawableRight="@null" />
+                <TextView
+                    android:id="@+id/more_tv_email_edit"
+                    style="@style/info_item_content"
+  					android:layout_width="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_ll_qq"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                style="@style/info_item_top" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="ＱＱ" />
+
+                <EditText
+                    android:id="@+id/more_et_qq"
+                    style="@style/info_item_content"
+                    android:background="@null"
+                    android:drawableRight="@drawable/edit_pen"
+                    android:inputType="numberDecimal"
+                    android:hint="请填写" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_ll_weixin"
+                style="@style/info_item_middle"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="微信" />
+
+                <EditText
+                    android:id="@+id/more_et_weixin"
+                    style="@style/info_item_content"
+                    android:background="@null"
+                    android:drawableRight="@drawable/edit_pen"
+                    android:hint="请填写" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_ll_msn"
+                style="@style/info_item_middle"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="ＭＳＮ" />
+
+                <EditText
+                    android:id="@+id/more_et_msn"
+                    style="@style/info_item_content"
+                    android:background="@null"
+                    android:inputType="textEmailAddress"
+                    android:drawableRight="@drawable/edit_pen"
+                    android:hint="请填写" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/more_ll_weibo"
+                style="@style/info_item_bottom"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="微博" />
+
+                <EditText
+                    android:id="@+id/more_et_weibo"
+                    style="@style/info_item_content"
+                    android:background="@null"
+                    android:drawableRight="@drawable/edit_pen"
+                    android:hint="请填写" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+	<ListView
+	    android:layout_width="wrap_content"
+	    android:layout_height="0dp" />
+</LinearLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_background" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="@string/user_search_title" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_round_gray"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <EditText
+                android:id="@+id/user_search_et_initial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:drawableLeft="@drawable/search_icon"
+                android:hint="@string/hint_search"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize_text" />
+
+            <TextView
+                android:id="@+id/user_search_iv_clear_initial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_clear_white"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/user_search_tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_round_blue_active"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_eidt"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        style="@style/line_gray_stroke_h"
+        android:background="@drawable/shadow_top"
+        android:layout_height="2dp" />
+
+    <TextView
+        android:id="@+id/user_search_tv_nearby"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/rectangle_radius_white"
+        android:drawableLeft="@drawable/nearby"
+        android:gravity="center_vertical"
+        android:text="附近的人"
+        android:textSize="@dimen/textsize_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_radius_white"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_sex"
+            android:textSize="@dimen/textsize_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/user_search_tv_sex_man"
+                style="@style/item_search_init"
+                android:text="@string/user_sex_man" />
+
+            <TextView
+                android:id="@+id/user_search_tv_sex_woman"
+                style="@style/item_search_init"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_sex_woman" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle_radius_white"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_age"
+            android:textSize="@dimen/textsize_text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/user_search_tv_age_0_18"
+                style="@style/item_search_init"
+                android:text="@string/user_age_0_18" />
+
+            <TextView
+                android:id="@+id/user_search_tv_age_18_25"
+                style="@style/item_search_init"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_age_18_25" />
+
+            <TextView
+                android:id="@+id/user_search_tv_age_25_28"
+                style="@style/item_search_init"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_age_25_28" />
+
+            <TextView
+                android:id="@+id/user_search_tv_age_28_32"
+                style="@style/item_search_init"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_age_28_32" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/user_search_tv_age_32_35"
+                style="@style/item_search_init"
+                android:text="@string/user_age_32_35" />
+
+            <TextView
+                android:id="@+id/user_search_tv_age_35_38"
+                style="@style/item_search_init"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_age_35_38" />
+
+            <TextView
+                android:id="@+id/user_search_tv_age_38_45"
+                style="@style/item_search_init"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_age_38_45" />
+
+            <TextView
+                android:id="@+id/user_search_tv_age_45_100"
+                style="@style/item_search_init"
+                android:layout_marginLeft="10dp"
+                android:text="@string/user_age_45_100" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

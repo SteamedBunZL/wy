@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    	<ListView
+	    android:layout_below="@id/page_rl_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent" />
+    <RelativeLayout
+        android:id="@+id/wheel_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/wheel_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/plugin_wheel_bg"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wheel_province"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wheel_city"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <kankan.wheel.widget.WheelView
+                android:id="@+id/wheel_district"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/input_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/plugin_wheelbtn_bg"
+            android:focusableInTouchMode="true"
+            android:layout_above="@+id/wheel_layout"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp" >
+
+            <Button
+                android:id="@+id/wheel_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/selector_round_btn_blue"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="取消"
+                android:textColor="@android:color/white" />
+
+            <EditText
+                android:id="@+id/wheel_et_snippet"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/rectangle_radius_white"
+                android:hint="请输入详细地址"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize_text" />
+
+            <Button
+                android:id="@+id/wheel_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selector_round_btn_blue"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:text="确定"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

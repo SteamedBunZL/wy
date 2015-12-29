@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_gravity="top" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="我的评分" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="活动氛围"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/line_point" />
+
+        <RatingBar
+            android:id="@+id/event_valu_rb_atmo"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_marginLeft="5dip"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressDrawable="@drawable/rating_bar" />
+
+        <TextView
+            android:id="@+id/event_valu_tv_atmo"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/carmine_text"
+            android:textSize="@dimen/textsize_text"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="人员出席"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/line_point" />
+
+        <RatingBar
+            android:id="@+id/event_valu_rb_attend"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_marginLeft="5dip"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressDrawable="@drawable/rating_bar" />
+
+        <TextView
+            android:id="@+id/event_valu_tv_attend"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/carmine_text"
+            android:textSize="@dimen/textsize_text"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="活动费用"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/line_point" />
+
+        <RatingBar
+            android:id="@+id/event_valu_rb_price"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_marginLeft="5dip"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressDrawable="@drawable/rating_bar" />
+
+        <TextView
+            android:id="@+id/event_valu_tv_price"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/carmine_text"
+            android:textSize="@dimen/textsize_text"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="活动环境"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/line_point" />
+
+        <RatingBar
+            android:id="@+id/event_valu_rb_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="14dp"
+            android:layout_marginLeft="5dip"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:progressDrawable="@drawable/rating_bar" />
+
+        <TextView
+            android:id="@+id/event_valu_tv_addr"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/carmine_text"
+            android:textSize="@dimen/textsize_text"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+</LinearLayout>

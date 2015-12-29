@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="在地图上选一个点" />
+
+        <ImageButton
+            android:id="@+id/page_btn_right"
+            style="@style/page_backbtn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_button_enter_mark" />
+    </RelativeLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapEventView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/page_rl_title"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/select_map_ibtn_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/position" />
+
+        <LinearLayout
+            android:id="@+id/select_map_ll_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ccffffff"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/select_map_tv_info"
+                style="@style/textview_text"
+                android:gravity="right|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/loading" />
+
+            <com.whoyao.widget.ClearEditText
+                android:id="@+id/select_map_et_desc"
+                style="@style/edittext_big"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:background="@drawable/rectangle_radius_white_transparent"
+                android:hint="@string/hint_addr_desc" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+    </LinearLayout>
+
+</RelativeLayout>

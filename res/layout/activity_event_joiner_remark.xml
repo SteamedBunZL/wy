@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+    
+<RelativeLayout
+        android:id="@+id/page_title"
+        style="@style/page_titlebar"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton style="@style/page_backbtn" 
+            android:id="@+id/page_btn_back" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="备注" />
+    </RelativeLayout>
+
+<EditText
+    android:id="@+id/joiner_remark_et_content"
+    android:layout_below="@id/page_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="5dp"
+    android:gravity="left|top"
+    android:lines="5"
+    android:textSize="@dimen/textsize_eidt"
+    android:background="@drawable/rectangle_radius_white" >
+</EditText>
+
+<TextView
+    android:id="@+id/joiner_remark_tv_num"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@id/joiner_remark_et_content"
+    android:layout_alignRight="@id/joiner_remark_et_content"
+    android:layout_margin="5dp"
+    android:textColor="@color/gray_text"
+    android:text="0/50" />
+
+<Button
+    android:id="@+id/joiner_remark_btn_enter"
+    style="@style/button_big"
+    android:layout_below="@+id/joiner_remark_et_content"
+    android:text="完成" />
+
+</RelativeLayout>

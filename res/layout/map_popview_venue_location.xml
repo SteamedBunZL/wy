@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_map"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/popup_bg" >
+
+    <TextView
+        android:id="@+id/popview_address_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxWidth="300dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="没有得到您的位置信息"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textsize_text" />
+
+    <Button
+        android:id="@+id/popview_address_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/popview_address_tv"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/rectangle_radius_blue"
+        android:padding="5dp"
+        android:text="发送到手机"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

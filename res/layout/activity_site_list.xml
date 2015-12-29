@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:drawableRight="@drawable/selector_triangle"
+            android:text="羽毛球" />
+
+        <ImageView
+            android:id="@+id/site_iv_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/selector_button_event_map" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/event_search_line"
+        style="@style/line_gray_stroke_h"
+        android:layout_height="1dp"
+        android:layout_below="@+id/event_search_ll_1" />
+
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/event_search_line"
+        android:gravity="center"
+        android:text="亲，很抱歉，根据您的搜索条件，未找到可预订的场地 "
+        android:visibility="invisible" />
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/event_search_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/event_search_line"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+    <View
+        android:id="@+id/event_search_shadow_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/event_search_ll_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/page_rl_title"
+        android:background="@color/gray_e8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp" >
+
+        <LinearLayout
+            android:id="@+id/site_list_ll_money"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/site_list_tv_money"
+                style="@style/event_search_filter_text"
+                android:text="价格" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/site_list_ll_area"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/site_list_tv_area"
+                style="@style/event_search_filter_text"
+                android:text="区域 " />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/event_search_ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/event_search_ll_0"
+        android:background="@color/gray_e8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" >
+
+        <LinearLayout
+            android:id="@+id/site_list_ll_date"
+            style="@style/event_search_filter_back"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:id="@+id/site_list_tv_date"
+                style="@style/event_search_filter_text"
+                android:text="日期 " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/site_list_ll_time"
+            style="@style/event_search_filter_back"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" >
+
+            <TextView
+                android:id="@+id/site_list_tv_time"
+                style="@style/event_search_filter_text"
+                android:text="时段" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/event_search_shadow_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/event_search_ll_0"
+        android:layout_marginBottom="3dp"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/event_search_shadow_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/event_search_ll_1"
+        android:layout_alignTop="@id/event_search_ll_1"
+        android:layout_marginTop="3dp"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/site_list_pop_money"
+        android:layout_width="@dimen/pop_item_width0"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/event_search_ll_0"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/main_dropdown_list_bkg_center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <!--
+        <TextView
+            android:id="@+id/event_search_time_0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="30以下"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/event_search_time_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="30-60"
+            android:textSize="@dimen/textsize_text" />
+        -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/site_list_pop_area"
+        android:layout_width="@dimen/pop_item_width0"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/event_search_ll_0"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/main_dropdown_list_bkg_center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/site_list_list_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@color/gray_stroke"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/site_list_pop_date"
+        android:layout_width="@dimen/pop_item_width0"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_search_ll_1"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/main_dropdown_list_bkg_center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/site_list_pop_time"
+        android:layout_width="@dimen/pop_item_width1"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/event_search_ll_1"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/main_dropdown_list_bkg_center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/site_list_list_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:divider="@color/gray_stroke"
+            android:dividerHeight="1px"
+            android:fadingEdge="none" />
+        <!-- android:layout_height="@dimen/pop_area_height" -->
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/site_pop_type"
+        android:layout_width="@dimen/pop_area_right_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/page_rl_title"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/xialas"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/site_type_badminton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="羽毛球"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/site_type_tennis"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="网球"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/site_type_pingpong"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="乒乓球"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/site_type_basketball"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="篮球"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/site_type_football"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="足球"
+            android:textSize="@dimen/textsize_text" />
+    </LinearLayout>
+
+</RelativeLayout>

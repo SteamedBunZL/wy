@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/myfree_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/myfree_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="@string/my_free" />
+
+        <Button
+            android:id="@+id/myfree_btn_add"
+            style="@style/page_backbtn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_button_edit" />
+    </RelativeLayout>
+
+    <ListView style="@style/listview"
+        android:paddingTop="5dp"
+        android:id="@+id/myfree_listview" >
+    </ListView>
+
+</LinearLayout>

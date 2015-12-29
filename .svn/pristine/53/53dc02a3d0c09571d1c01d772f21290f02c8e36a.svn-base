@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.whoyao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/topic_detial_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/topic_detial_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/infilling"
+            android:textSize="@dimen/textsize_button" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <ImageView
+                android:id="@+id/topic_detial_iv_face"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_face" />
+
+            <TextView
+                android:id="@+id/topic_detial_tv_nick"
+                style="@style/textview_text"
+                android:layout_alignTop="@id/topic_detial_iv_face"
+                android:layout_toRightOf="@id/topic_detial_iv_face"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:textColor="@color/blue_text" />
+
+            <TextView
+                android:id="@+id/topic_detial_tv_time"
+                style="@style/textview_text"
+                android:layout_alignBottom="@id/topic_detial_iv_face"
+                android:layout_toRightOf="@id/topic_detial_iv_face"
+                android:textColor="@color/gray_text" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/topic_detial_tv_content"
+            style="@style/textview_text"
+            android:singleLine="false" />
+
+        <FrameLayout
+            android:id="@+id/topic_detial_rl_image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" >
+
+            <org.taptwo.widget.ViewFlow
+                android:id="@+id/topic_detial_vf_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            
+            <org.taptwo.widget.CircleFlowIndicator
+                android:id="@+id/topic_detial_ci_image"
+        		android:layout_height="wrap_content"
+        		android:layout_width="wrap_content"
+        		android:layout_marginBottom="10dp"
+        		app:radius="5dp"
+        		app:spacing="5dp"
+        		app:activeColor="@color/smalt_titlebar"
+        		app:inactiveColor="@color/smalt_titlebar"
+        		android:layout_gravity="center_horizontal|bottom" />
+            
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

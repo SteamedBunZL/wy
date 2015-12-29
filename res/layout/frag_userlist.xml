@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="朋友" />
+
+        <TextView
+            android:id="@+id/userlist_tv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_button_search" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/userlist_rg_type"
+        style="@style/radio_group_top"
+        android:background="@color/gray_e4" >
+
+        <RadioButton
+            android:id="@+id/userlist_rb_interest"
+        	style="@style/radio_button_top"
+            android:background="@drawable/selector_button_header_left"
+            android:checked="true"
+            android:text="兴趣相同的人" />
+
+        <RadioButton
+            android:id="@+id/userlist_rb_doyen"
+        	style="@style/radio_button_top"
+            android:background="@drawable/selector_button_header_right"
+            android:text="活动达人" />
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/shadow_top" />
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/userlist_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:headerDividersEnabled="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false" />
+
+</LinearLayout>

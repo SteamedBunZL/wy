@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+        <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="隐私政策" />
+    </RelativeLayout>
+    
+    <WebView 
+        android:id="@+id/licence_webview"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/gray_background"
+		android:scrollbarStyle="outsideInset"
+		android:layout_marginLeft="5dp"
+		android:layout_marginBottom="10dp"
+        android:contentDescription="互邀网用户服务条款"
+        />    
+</LinearLayout>

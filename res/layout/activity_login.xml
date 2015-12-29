@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attr="http://schemas.android.com/apk/res/com.whoyao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/gray_background" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/logo" />
+
+    <!-- <EditText
+        android:id="@+id/login_et_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:imeOptions="actionNext"
+        android:singleLine="true"
+        android:inputType="textEmailAddress"
+        android:textSize="@dimen/textsize_eidt"
+        android:background="@drawable/rectangle_radius_white"
+        android:hint="@string/hint_account"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText> -->
+
+    <com.whoyao.widget.ClearEditText
+        android:id="@+id/login_et_account"
+        style="@style/edittext_big"
+        android:singleLine="true"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:hint="@string/hint_account" />
+     <com.whoyao.widget.ClearEditText
+        android:id="@+id/login_et_password"
+        style="@style/edittext_big"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:hint="@string/hint_input_pwd" /> 
+
+<!--      <EditText
+        android:id="@+id/login_et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:password="true"
+        android:imeOptions="actionGo"
+        android:singleLine="true"
+        android:textSize="@dimen/textsize_eidt"
+        android:inputType="textVisiblePassword"
+        android:background="@drawable/rectangle_radius_white"
+        android:hint="@string/hint_input_pwd"
+        android:ems="10" /> -->
+
+    <Button
+        android:id="@+id/login_btn_login"
+        style="@style/button_big"
+        android:layout_marginTop="10dp"
+        android:text="@string/login" />
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <com.whoyao.widget.DrawableCenterButton
+            android:id="@+id/login_btn_WeiBo"
+            style="@style/button_third_weibo"
+            android:layout_weight="1"
+       	    android:visibility="visible"/>
+   <com.whoyao.widget.DrawableCenterButton
+        android:id="@+id/login_btn_QQ"
+        style="@style/button_third_qq"
+        android:layout_weight="1"
+        android:visibility="visible"/>
+	</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical" >
+    <TextView
+        android:id="@+id/login_tv_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/textsize_button"
+        android:hint="|" />
+
+    <TextView
+        android:id="@+id/login_tv_retrieve_pwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_toLeftOf="@+id/login_tv_line"
+        android:layout_centerVertical="true"
+        android:textColor="@color/blue_button"
+        android:textSize="@dimen/textsize_button"
+        android:text="@string/retrieve_pwd" />
+
+    <TextView
+        android:id="@+id/login_tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_toRightOf="@+id/login_tv_line"
+        android:layout_centerVertical="true"
+        android:textColor="@color/blue_button"
+        android:textSize="@dimen/textsize_button"
+        android:text="@string/register_account" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

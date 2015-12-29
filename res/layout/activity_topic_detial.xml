@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="话题详情" />
+
+        <Button
+            android:id="@+id/page_btn_right"
+            style="@style/page_backbtn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_button_topic_remark" />
+    </RelativeLayout>
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/topic_detial_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/page_rl_title"
+        android:divider="@color/gray_stroke"
+        android:dividerHeight="1dp"
+        android:fadingEdge="none"
+        android:headerDividersEnabled="true"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/page_rl_title"
+        android:background="@drawable/shadow_top" />
+
+</RelativeLayout>

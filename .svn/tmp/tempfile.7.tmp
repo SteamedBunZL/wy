@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.whoyao"
+    android:installLocation="auto"
+    android:versionCode="6"
+    android:versionName="@string/version_name" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="10" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    
+
+    <application
+        android:name="com.whoyao.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:logo="@drawable/icon"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.whoyao.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MainActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.GuideActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.LoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.ThirdpreferActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.LicenceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.RegPhoneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.RegEmailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.RegPhoneCheckCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.RegPhoneInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.RetPhoneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.RetPhoneCheckCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.RetPhoneSetPwdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.RetEmailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.UserSelfDetialActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyMoreinfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyChangePwdActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyFreeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyFreeAddActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MySetContentActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyVerifyEmailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyVerifyPhoneActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyVerifyHonestyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyTagActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyTagAddActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyHonestyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SettingActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SettingSecurityActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SettingSpaceTimeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SettingConditionActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SettingHelpActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SettingAboutActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SettingFeedbackActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectPhotoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectAddrActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectButton2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectButton3Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectDateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectSingleWheelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectTimeHalfHourActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectDoubleHourActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectAddrWheelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectCityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectDoubleNumberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectThreeNumberActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventAreaSetActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SelectTimeMinuteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Translucent_NoTitleBar" >
+        </activity>
+        <activity android:name="com.whoyao.activity.SelectMapPointActivity" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.TestActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventAddGuideActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventSearchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventDetialActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventAddActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventAddDescActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventAddKeywordActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventCreaterVerifyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventMyListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventAlbumActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventPhotoAddActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventCancelActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventAccuseActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventJoinerVerifyActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventJoinerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventRemarkActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventValuationActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventPhotoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventPhotoCancelActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventUserValuActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventJoinerMgrActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventJoinerRemarkActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventSearchInitialActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventOtherListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventOther2ListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventAddrMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventMapModeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyMessageActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.UserOtherDetialActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.PrivateDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyInviteActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyInviteDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.InvitePubliseActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.UserSearchInitialActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.UserSearchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.MyFriendActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.UserAddFriendActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.EventAddMapSetSnippetActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.SettingSpaceTimeMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.UserPhotoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.InviteDescActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.activity.InviteDetailMapAcitivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name="com.whoyao.activity.VerifyNameAndPhoneActivity" >
+        </activity>
+        <activity android:name="com.whoyao.activity.InviteFriendActivity" >
+        </activity>
+        <activity android:name="com.whoyao.activity.MyFundActivity" >
+        </activity>
+        <activity android:name="com.whoyao.topic.TopicSearchIntialActivity" >
+        </activity>
+        <activity android:name="com.whoyao.topic.TopicSearchActivity" >
+        </activity>
+        <activity android:name="com.whoyao.topic.TopicUserListActivity" >
+        </activity>
+        <activity android:name="com.whoyao.topic.TopicAddActivity" >
+        </activity>
+        <activity android:name="com.whoyao.topic.TopicDetialActivity" >
+        </activity>
+        <activity android:name="com.whoyao.topic.TopicPhotoCancelActivity" >
+        </activity>
+        <activity android:name="com.whoyao.topic.TopicRemarkAddActivity" >
+        </activity>
+        <activity android:name="com.whoyao.topic.TopicTagChoiceActivity" >
+        </activity>
+        <activity
+            android:name="com.whoyao.topic.TopicTagFreeChoiceActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":location_service" >
+        </service>
+        <service android:name="com.whoyao.message.service.MessageService" >
+        </service>
+
+        <activity
+            android:name="com.whoyao.venue.SiteSearchInitialActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.VenueMapModeActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.VenueMoePicActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.SiteDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.VenueDetialActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.VenueMoeInfoActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.VenueSearchActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.VenueSearchInitialActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.VenueAddrMapActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.PaySuccessActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.CartActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.OrderConfirmActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.whoyao.venue.MyBillActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".venue.BillDetailActivity" >
+        </activity>
+        <activity
+            android:name="com.alipay.android.app.sdk.WapPayActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity android:name=".venue.SiteMapModeActivity" >
+        </activity>
+        <activity android:name=".fund.GetPhoneCodeActivity" >
+        </activity>
+        <activity android:name=".fund.SetOrChangePasswordActivity" >
+        </activity>
+        <activity android:name=".venue.WebPayAcitivity" >
+        </activity>
+        <activity android:name=".venue.PayFailActivity" >
+        </activity>
+        <activity android:name=".venue.VenuPhotoCancelActivity" >
+        </activity>
+        <activity android:name=".service.SocketConnectActivity" >
+        </activity>
+
+        <service android:name=".service.BaseService" >
+        </service>
+        <service android:name=".service.WYService" >
+        </service>
+    </application>
+
+</manifest>

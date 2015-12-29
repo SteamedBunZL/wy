@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/private_detail_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/private_detail_title"
+            style="@style/page_title"
+            android:text="笑傲江湖" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#606060"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp" >
+
+        <Button
+            android:id="@+id/btn_send_private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_button_blue"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="发送"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_button" />
+
+        <EditText
+            android:id="@+id/et_sendmessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@id/btn_send_private"
+            android:background="@drawable/rectangle_radius_white"
+            android:maxLines="2"
+            android:minHeight="34dp"
+            android:padding="5dp"
+            android:textSize="@dimen/textsize_eidt" />
+    </RelativeLayout>
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_private_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_below="@+id/page_rl_title"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:headerDividersEnabled="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false" />
+
+</RelativeLayout>

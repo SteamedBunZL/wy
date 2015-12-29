@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/com.whoyao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/header_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/rectangle_radius_gray_header"
+        android:fadingEdge="none"
+        android:spacing="10dp"
+        android:visibility="gone" />
+
+<!--         android:background="@drawable/rectangle_radius_gray_header" -->
+    <LinearLayout
+        android:id="@+id/header_ll_indic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="5dp"
+        android:background="@drawable/rectangle_radius_black_bottom"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+<!--         android:background="@drawable/rectangle_radius_black_bottom" -->
+
+        <TextView
+            android:id="@+id/header_tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/infilling"
+            android:layout_marginRight="5dp"
+            android:textColor="@android:color/white" />
+
+         
+    </LinearLayout>
+
+</FrameLayout>

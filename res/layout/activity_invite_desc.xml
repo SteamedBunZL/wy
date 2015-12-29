@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/invite_desc_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="邀请描述" />
+    </RelativeLayout>
+
+    <RelativeLayout 
+	android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="10dp" >
+
+        <EditText
+            android:id="@+id/invite_desc_et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_radius_white"
+            android:gravity="top"
+            android:hint="请输入邀请描述"
+            android:lines="5"
+            android:padding="5dp"
+            android:textSize="@dimen/textsize_eidt" />
+
+        <TextView 
+            android:id="@+id/invite_desc_tv_num"
+            android:layout_alignRight="@id/invite_desc_et_content"
+            android:layout_alignBottom="@id/invite_desc_et_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:hint="0/500"/>
+    </RelativeLayout>
+    <Button 
+        android:id="@+id/invite_desc_btn_enter"
+        style="@style/button_big"
+        android:text="@string/enter" />
+</LinearLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rege_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/rege_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="@string/register_email" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rege_rl_info"
+        style="@style/info_item_single"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rege_rl_title"
+        android:padding="2dp" >
+
+        <TextView
+            android:id="@+id/rege_label_email"
+            style="@style/textview_label"
+            android:layout_alignParentLeft="true"
+            android:text="@string/label_email" />
+
+
+        <com.whoyao.widget.ClearEditText
+            android:id="@+id/rege_et_email"
+            style="@style/edittext_white"
+            android:layout_alignBaseline="@id/rege_label_email"
+            android:layout_toRightOf="@id/rege_label_email"
+            android:hint="@string/hint_input_email" />
+
+        <View
+            android:id="@+id/rege_line0"
+            style="@style/line_gray_h"
+            android:layout_below="@id/rege_label_email" />
+
+        <TextView
+            android:id="@+id/rege_label_pwd"
+            style="@style/textview_label"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rege_line0"
+            android:text="@string/label_pwd" />
+
+
+
+        <com.whoyao.widget.ClearEditText
+            android:id="@+id/rege_et_pwd"
+            style="@style/edittext_white"
+            android:layout_alignBaseline="@id/rege_label_pwd"
+            android:layout_below="@id/rege_line0"
+            android:layout_toRightOf="@id/rege_label_pwd"
+            android:hint="@string/hint_input_pwd_register" />
+
+        <View
+            android:id="@+id/rege_line1"
+            style="@style/line_gray_h"
+            android:layout_below="@id/rege_label_pwd" />
+
+        <TextView
+            android:id="@+id/rege_label_name"
+            style="@style/textview_label"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rege_line1"
+            android:text="@string/label_nick" />
+
+
+
+        <com.whoyao.widget.ClearEditText
+            android:id="@+id/rege_et_nick"
+            style="@style/edittext_white"
+            android:layout_alignBaseline="@id/rege_label_name"
+            android:layout_below="@id/rege_line1"
+            android:layout_toRightOf="@id/rege_label_name"
+            android:hint="@string/hint_input_nick" />
+<!--             -->
+
+        <View
+            android:id="@+id/rege_line2"
+            style="@style/line_gray_h"
+            android:layout_below="@id/rege_label_name" />
+
+        <TextView
+            android:id="@+id/rege_label_sex"
+            style="@style/textview_label"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rege_line2"
+            android:text="@string/label_sex" />
+
+        <TextView
+            android:id="@+id/rege_tv_sex"
+            style="@style/edittext_white"
+            android:layout_alignBaseline="@+id/rege_label_sex"
+            android:layout_below="@id/rege_line2"
+            android:layout_toRightOf="@id/rege_label_sex"
+            android:hint="@string/hint_select_sex" />
+
+        <View
+            android:id="@+id/rege_line3"
+            style="@style/line_gray_h"
+            android:layout_below="@id/rege_label_sex" />
+
+        <TextView
+            android:id="@+id/rege_label_birthday"
+            style="@style/textview_label"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rege_line3"
+            android:text="@string/label_birthday_3" />
+
+        <TextView
+            android:id="@+id/rege_tv_birthday"
+            style="@style/edittext_white"
+            android:layout_alignBaseline="@+id/rege_label_birthday"
+            android:layout_toRightOf="@id/rege_label_birthday"
+            android:hint="@string/hint_select_birthday" />
+
+        <View
+            android:id="@+id/rege_line4"
+            style="@style/line_gray_h"
+            android:layout_below="@id/rege_label_birthday" />
+
+        <TextView
+            android:id="@+id/rege_label_addr"
+            style="@style/textview_label"
+            android:layout_alignLeft="@id/rege_label_birthday"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/rege_line4"
+            android:text="@string/label_addr" />
+
+
+        <TextView
+            android:id="@+id/rege_tv_addr"
+            style="@style/edittext_white"
+            android:layout_alignBaseline="@+id/rege_label_addr"
+            android:layout_toRightOf="@id/rege_label_addr"
+            android:layout_below="@id/rege_line4"
+            android:hint="@string/hint_select_addr" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rege_rl_licence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rege_rl_info"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" >
+
+        <!--
+             <CheckBox
+            android:id="@+id/rege_cb_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="-15dp"
+            android:button="@drawable/selector_checkbox_carmine" />
+        -->
+
+        <TextView
+            android:id="@+id/rege_tv_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:drawableLeft="@drawable/selector_checkbox_carmine"
+            android:drawablePadding="5dp"
+            android:singleLine="true"
+            android:text="@string/licence_agree"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:id="@+id/rege_tv_licence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/rege_tv_agree"
+            android:singleLine="true"
+            android:text="@string/licence_title"
+            android:textColor="@color/blue_button"
+            android:textSize="@dimen/textsize_text" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/rege_btn_commit"
+        style="@style/button_big"
+        android:layout_below="@id/rege_rl_licence"
+        android:layout_marginTop="10dp"
+        android:text="@string/register" />
+
+    <Button
+        android:id="@+id/rege_btn_phone"
+        style="@style/button_big"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/selector_button_carmine"
+        android:text="@string/register_phone" />
+
+</RelativeLayout>

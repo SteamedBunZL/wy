@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/select_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:background="@android:color/transparent"
+    android:orientation="vertical" >
+   
+<LinearLayout
+    android:id="@+id/select_ll_button"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/plugin_btn_bg" >
+
+    <Button
+        android:id="@+id/select_btn_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_button_plugin_select"
+        android:layout_marginTop="10dp"
+        android:hint="null"
+        android:textColorHint="@color/red"
+        android:textColor="@drawable/selector_color_black"
+        android:textSize="@dimen/textsize_title" />
+
+    <Button
+        android:id="@+id/select_btn_1"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="null"
+        android:textColorHint="@color/red"
+        android:textSize="@dimen/textsize_title"
+        android:textColor="@drawable/selector_color_black"
+        android:background="@drawable/selector_button_plugin_select" />
+
+    <Button
+        android:id="@+id/select_btn_cancle"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_title"
+        android:background="@drawable/selector_button_plugin_cancel"
+        android:textColor="@android:color/white"
+        android:text="取消" />
+    
+</LinearLayout>
+    
+    
+</LinearLayout>

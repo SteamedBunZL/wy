@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="我要报名" />
+    </RelativeLayout>
+
+	<TextView
+	    android:id="@+id/event_verify_tv_step0"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:paddingLeft="20dp"
+	    android:text="请填写真实资料，方便活动时联系哦~" />
+	<TextView
+	    android:id="@+id/event_verify_tv_step1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:textColor="@color/gray_text"
+	    android:visibility="gone"
+	    android:text="请输入收到的短信验证码" />
+
+    <EditText
+        android:id="@+id/event_verify_et_realname"
+        style="@style/edittext_big"
+        android:hint="请输入真实姓名"
+        android:imeOptions="actionNext"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/event_verify_et_phone"
+        style="@style/edittext_big"
+        android:hint="@string/hint_input_phone"
+        android:imeOptions="actionGo"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/event_verify_btn_sendcode"
+        style="@style/button_big"
+        android:layout_marginTop="10dp"
+        android:text="向我发送验证码/下一步" />
+
+    <Button
+        android:id="@+id/event_verify_btn_resendcode"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/selector_round_btn_carmine"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="@dimen/textsize_button"
+        android:text="@string/resend" />
+    
+</LinearLayout>

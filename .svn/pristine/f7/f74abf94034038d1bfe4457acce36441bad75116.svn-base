@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.whoyao.widget.CustomRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background" >
+
+    <RelativeLayout
+        android:id="@+id/my_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/my_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="个人资料" />
+    </RelativeLayout>
+
+    <!-- " -->
+
+    <com.whoyao.widget.ElasticScrollView
+        android:id="@+id/my_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_title"
+        android:scrollbars="none" >
+
+        <!-- android:layout_alignParentBottom="true" -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white" >
+
+                <ImageView
+                    android:id="@+id/my_iv_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/perbg" />
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/my_iv_background"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/layer_round_left"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp" >
+
+                    <LinearLayout
+                        android:id="@+id/my_ll_envet"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/my_event_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="活动"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/my_ll_topic"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:textColor="@android:color/white" >
+
+                        <TextView
+                            android:id="@+id/my_topic_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@android:color/white" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="话题"
+                            android:textColor="@android:color/white" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/my_iv_face"
+                    android:layout_width="80dip"
+                    android:layout_height="80dip"
+                    android:layout_alignBottom="@id/my_iv_background"
+                    android:layout_marginBottom="-50dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/rectangle_stroke_gray"
+                    android:padding="2dp"
+                    android:src="@drawable/default_face" />
+
+                <LinearLayout
+                    android:id="@+id/my_info_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_iv_background"
+                    android:layout_marginRight="5dp"
+                    android:layout_toRightOf="@id/my_iv_face"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp" >
+
+                    <TextView
+                        android:id="@+id/my_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="@string/user_nick"
+                        android:textSize="@dimen/textsize_button" />
+
+                    <ImageView
+                        android:id="@+id/my_mobile_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:clickable="false"
+                        android:src="@drawable/selector_state_mobile" />
+
+                    <ImageView
+                        android:id="@+id/my_honestye_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:src="@drawable/selector_state_honesty" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/my_info_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/my_info_0"
+                    android:layout_toRightOf="@id/my_iv_face"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp" >
+
+                    <TextView
+                        android:id="@+id/my_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:maxEms="8"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_text" />
+
+                    <TextView
+                        android:id="@+id/my_constellation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/gray_text" />
+
+                    <TextView
+                        android:id="@+id/my_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_text" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/my_info_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/my_info_1"
+                    android:layout_toRightOf="@id/my_iv_face"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="2dp" >
+
+                    <TextView
+                        android:id="@+id/my_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/gray_text" />
+
+                    <TextView
+                        android:id="@+id/my_waist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/gray_text" />
+
+                    <TextView
+                        android:id="@+id/my_blood"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray_text" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginBottom="-5dp"
+                android:background="@drawable/shadow_top" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/rectangle_radius_white"
+                    android:orientation="horizontal" >
+
+                    <com.whoyao.widget.HorizontalListView
+                        android:id="@+id/my_hl_photo"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="2dp"
+                        android:layout_height="@dimen/image_height" />
+
+                    <ImageView
+                        android:id="@+id/my_iv_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingRight="10dp"
+                        android:src="@drawable/arrow_right" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_free"
+                style="@style/info_item_single"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="闲人预告"
+                    android:textColor="@color/blue_green" />
+
+                <TextView
+                    android:id="@+id/my_tv_free"
+                    style="@style/info_item_content"
+                    android:hint="点击发布闲人预告"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_content"
+                style="@style/info_item_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_content" />
+
+                <TextView
+                    android:id="@+id/my_set_content"
+                    style="@style/info_item_content"
+                    android:singleLine="false"
+                    android:hint="@string/hint_input" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-1dp"
+                android:background="@drawable/selector_radius_middle"
+                android:gravity="center_vertical"
+                android:minHeight="@dimen/item_height"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/my_ll_tags"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="-10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="5dp" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/my_set_tag"
+                    style="@style/info_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="-20dp"
+                    android:paddingLeft="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_nick"
+                style="@style/info_item_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="@string/user_nick" />
+
+                <TextView
+                    android:id="@+id/my_set_nick"
+                    style="@style/info_item_content"
+                    android:layout_marginRight="25dp"
+                    android:drawableRight="@null"
+                    android:hint="@string/hint_input" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_city"
+                style="@style/info_item_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:layout_height="match_parent"
+                    android:text="@string/label_city" />
+
+                <TextView
+                    android:id="@+id/my_set_city"
+                    style="@style/info_item_content"
+                    android:hint="@string/hint_input" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_birthday"
+                style="@style/info_item_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="@string/birthday" />
+
+                <TextView
+                    android:id="@+id/my_set_birthday"
+                    style="@style/info_item_content"
+                    android:hint="@string/hint_input" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_sex"
+                style="@style/info_item_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="@string/user_sex" />
+
+                <TextView
+                    android:id="@+id/my_set_sex"
+                    style="@style/info_item_content"
+                    android:hint="@string/hint_input" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_height"
+                style="@style/info_item_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:hint="@string/hint_input"
+                    android:text="@string/user_height" />
+
+                <EditText
+                    android:id="@+id/my_set_height"
+                    style="@style/info_item_content"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@null"
+                    android:hint="@string/hint_input"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/my_set_height_label"
+                    style="@style/info_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:drawableRight="@drawable/edit_pen"
+                    android:text="cm" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_waist"
+                style="@style/info_item_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="@string/user_weight" />
+
+                <EditText
+                    android:id="@+id/my_set_waist"
+                    style="@style/info_item_content"
+                    android:layout_width="0dp"
+                    android:layout_marginRight="0dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@null"
+                    android:hint="@string/hint_input"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/my_set_waist_label"
+                    style="@style/info_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:drawableRight="@drawable/edit_pen"
+                    android:text="kg" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_blood"
+                style="@style/info_item_bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="@string/user_blood" />
+
+                <TextView
+                    android:id="@+id/my_set_blood"
+                    style="@style/info_item_content"
+                    android:hint="@string/hint_input" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_more"
+                style="@style/info_item_single"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="@string/user_moreinfo" />
+
+                <TextView style="@style/info_item_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/my_ll_password"
+                style="@style/info_item_single"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="@string/user_setpwd" />
+
+                <TextView style="@style/info_item_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.whoyao.widget.ElasticScrollView>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp" />
+
+</com.whoyao.widget.CustomRelativeLayout>

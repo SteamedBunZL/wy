@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_radius_white"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/item_joiner_iv_face"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/default_face" />
+
+    <TextView
+        android:id="@+id/item_joiner_label_realname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/item_joiner_iv_face"
+        android:text="@string/label_name_4"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/item_event_tv_realname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_joiner_label_realname"
+        android:hint="@string/hint_other_name"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/item_joiner_label_join_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_joiner_iv_face"
+        android:layout_alignLeft="@+id/item_joiner_label_realname"
+        android:text="报名时间："
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/item_joiner_tv_join_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/item_joiner_label_join_time"
+        android:layout_toRightOf="@+id/item_joiner_label_join_time"
+        android:text="@string/infilling"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/item_joiner_label_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/item_joiner_label_join_time"
+        android:layout_alignLeft="@+id/item_joiner_label_realname"
+        android:layout_below="@+id/item_joiner_label_realname"
+        android:gravity="center_vertical"
+        android:text="手机号码："
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/item_joiner_tv_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/item_joiner_label_phone"
+        android:layout_toRightOf="@+id/item_joiner_label_phone"
+        android:text="@string/infilling"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/item_joiner_tv_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_joiner_iv_face"
+        android:layout_alignRight="@+id/item_joiner_iv_face"
+        android:layout_below="@+id/item_joiner_iv_face"
+        android:layout_marginTop="5dp"
+        android:maxLines="2"
+        android:text="@string/infilling"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/item_joiner_label_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/item_joiner_label_realname"
+        android:layout_below="@+id/item_joiner_iv_face"
+        android:layout_marginTop="5dp"
+        android:text="参加状态："
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/item_joiner_tv_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/item_joiner_label_state"
+        android:layout_toRightOf="@+id/item_joiner_label_state"
+        android:background="@drawable/rectangle_gray"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:text="待确认"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/item_joiner_label_remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_joiner_tv_state"
+        android:layout_marginTop="30dp"
+        android:text="备注 : "
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/item_joiner_tv_remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_joiner_tv_state"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/item_joiner_label_remark"
+        android:drawableRight="@drawable/edit1"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/textsize_text" />
+
+</RelativeLayout>

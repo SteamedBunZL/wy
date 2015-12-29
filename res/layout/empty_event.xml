@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/event_ll_empty"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/event_empty_tv_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="很抱歉，您所在的城市暂无活动" />
+
+        <TextView
+            android:id="@+id/event_empty_tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/event_empty_tv_0"
+            android:layout_below="@id/event_empty_tv_0"
+            android:text="您可以" />
+
+    <TextView
+        android:id="@+id/event_empty_other_area"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_round_btn_blue_reverse"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="换个地方转一转"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textsize_title" />
+
+    <TextView
+        android:id="@+id/event_empty_add_event"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_round_btn_blue"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="发个活动"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textsize_title" />
+
+</LinearLayout>

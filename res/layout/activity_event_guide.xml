@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+        <RelativeLayout
+        android:id="@+id/rete_rl_title"
+        style="@style/page_titlebar" >
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+        <TextView
+            style="@style/page_title"
+            android:text="@string/event_add_title" />
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/event_guide_rl_imm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@drawable/selector_button_carmine" >
+                <TextView
+                    android:id="@+id/event_guide_tv_imm_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="@dimen/textsize_text"
+                    android:text="@string/event_immediately" />
+                <TextView
+                    android:id="@+id/event_guide_tv_imm_1"
+                    android:layout_below="@id/event_guide_tv_imm_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_subtext"
+                    android:text="系统帮你找人，30分钟即可达成活动！" />
+                <TextView
+                    android:id="@+id/event_guide_tv_imm_2"
+                    android:layout_below="@id/event_guide_tv_imm_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_subtext"
+                    android:text="人数限制：2-20人" />
+                <TextView
+                    android:id="@+id/event_guide_tv_imm_3"
+                    android:layout_below="@id/event_guide_tv_imm_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_subtext"
+                    android:text="时间限制：当前时间40分钟之后" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow_right" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/event_guide_rl_normall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:background="@drawable/selector_button_blue" >
+                <TextView
+                    android:id="@+id/event_guide_tv_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_text"
+                    android:text="@string/event_normal" />
+                <TextView
+                    android:id="@+id/event_guide_tv_1"
+                    android:layout_below="@id/event_guide_tv_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_subtext"
+                    android:text="人数限制：2-200人" />
+                <TextView
+                    android:id="@+id/event_guide_tv_2"
+                    android:layout_below="@id/event_guide_tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/textsize_subtext"
+                    android:text="时间限制：当前时间60分钟之后" />
+                <TextView
+                    android:id="@+id/event_guide_tv_3"
+                    android:layout_below="@id/event_guide_tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/transparent"
+                    android:text="0"
+                    android:layout_marginBottom="20dp" />
+                 <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/arrow_right" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+</LinearLayout>

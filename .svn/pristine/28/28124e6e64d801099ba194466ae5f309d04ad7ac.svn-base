@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/gray_background"
+    >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="我的消息" />
+        <TextView 
+            android:id="@+id/private_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/delete"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_message_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/page_rl_title"
+        android:background="@color/gray_e4"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <RadioGroup
+            android:id="@+id/rg_message_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_message_title_private"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:background="@drawable/selector_button_header_left"
+                android:button="@null"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="私信"
+                android:textColor="@drawable/selector_color_gary_white"
+                android:textSize="@dimen/textsize_text" />
+
+            <RadioButton
+                android:id="@+id/rb_message_title_invite"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginLeft="-1dp"
+                android:layout_marginRight="-1dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_button_header_middle"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="邀请"
+                android:textColor="@drawable/selector_color_gary_white"
+                android:textSize="@dimen/textsize_text" />
+
+            <RadioButton
+                android:id="@+id/rb_message_title_inform"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:background="@drawable/selector_button_header_right"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="通知"
+                android:textColor="@drawable/selector_color_gary_white"
+                android:textSize="@dimen/textsize_text" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/message_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_message_title"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:headerDividersEnabled="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false" />
+    <View
+        android:id="@+id/event_search_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rl_message_title"
+        android:background="@drawable/shadow_top" />
+    
+
+</RelativeLayout>

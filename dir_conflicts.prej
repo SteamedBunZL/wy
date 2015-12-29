@@ -1,0 +1,16 @@
+Trying to add new property 'svn:ignore' with value '.settings
+bin
+gen
+',
+but property already exists with value 'gen
+bin
+'.Trying to change property 'svn:ignore' from '.settings
+bin
+gen
+' to '.settings
+bin
+gen
+',
+but property already exists with value 'gen
+bin
+'.

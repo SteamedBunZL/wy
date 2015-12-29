@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+     android:background="@color/gray_background"
+    >
+
+    <RelativeLayout
+        android:id="@+id/event_search_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back_initial"
+            style="@style/page_backbtn" />
+        <TextView
+            style="@style/page_title"
+            android:text="话题搜索" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/topic_search_ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_search_title"
+        android:background="@color/gray_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_round_gray"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <EditText
+                android:id="@+id/topic_search_et_initial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:hint="搜索点内容吧..."
+                android:drawableLeft="@drawable/search_icon"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize_eidt" />
+
+            <TextView
+                android:id="@+id/topic_search_iv_clear_initial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_clear_white"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/topic_search_tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_round_blue_active"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_eidt"
+            android:visibility="gone"
+             />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/topic_search_line"
+        style="@style/line_gray_stroke_h"
+        android:layout_height="1dp"
+        android:layout_below="@+id/topic_search_ll_search" />
+
+     <LinearLayout
+         android:id="@+id/topic_search_ll_hot_area"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_below="@id/topic_search_line"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"
+         android:layout_marginTop="20dp"
+         android:background="@drawable/rectangle_radius_white"
+         android:orientation="vertical"
+         android:paddingBottom="10dp"
+         android:paddingLeft="10dp"
+         android:paddingRight="10dp"
+         android:paddingTop="10dp"
+         >
+
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标签"
+            android:textSize="@dimen/textsize_button"
+            />
+       	<GridView 
+       	    android:id="@+id/topic_search_gv_hot_area"
+       	    android:layout_marginTop="10dp"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content"
+       	    android:numColumns="4"
+       	    android:gravity="center_horizontal"
+       	    android:verticalSpacing="10dp"
+       	    android:horizontalSpacing="10dp"
+       	    ></GridView>
+       
+    </LinearLayout>
+    
+
+</RelativeLayout>

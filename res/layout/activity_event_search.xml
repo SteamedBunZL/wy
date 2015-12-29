@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/event_search_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="@string/event_search_title" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/event_search_ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_search_title"
+        android:background="@android:color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_round_gray"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <EditText
+                android:id="@+id/event_search_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:drawableLeft="@drawable/search_icon"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize_eidt" />
+
+            <ImageView
+                android:id="@+id/event_search_iv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/selector_clear_white"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/event_search_tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_round_blue_active"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_eidt"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/event_search_line"
+        style="@style/line_gray_stroke_h"
+        android:layout_height="1dp"
+        android:layout_below="@+id/event_search_ll_1" />
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/event_search_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_below="@+id/event_search_line" />
+
+    <View
+        android:id="@+id/event_search_shadow_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/event_search_ll_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_search_ll_search"
+        android:background="@color/gray_e8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" >
+
+        <LinearLayout
+            android:id="@+id/event_search_ll_area"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/event_search_tv_area"
+                style="@style/event_search_filter_text"
+                android:text="区域 " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/event_search_ll_type"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/event_search_tv_type"
+                style="@style/event_search_filter_text"
+                android:text="类型 " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/event_search_ll_time"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/event_search_tv_time"
+                style="@style/event_search_filter_text"
+                android:text="时间 " />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/event_search_ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/event_search_ll_0"
+        android:background="@color/gray_e8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingRight="3dp"
+        android:paddingLeft="3dp" >
+
+        <LinearLayout
+            android:id="@+id/event_search_ll_progress"
+            style="@style/event_search_filter_back"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:id="@+id/event_search_tv_progress"
+                style="@style/event_search_filter_text"
+                android:text="状态 " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/event_search_ll_price"
+            style="@style/event_search_filter_back"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" >
+
+            <TextView
+                android:id="@+id/event_search_tv_price"
+                style="@style/event_search_filter_text"
+                android:text="费用 " />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/event_search_tv_joinable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_gary_blue"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="可报名"
+            android:layout_margin="3dp"
+            android:textColor="@drawable/selector_color_black"
+            android:textSize="@dimen/textsize_text"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/event_search_shadow_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/event_search_ll_0"
+        android:layout_marginBottom="3dp"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/event_search_shadow_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_alignBottom="@id/event_search_ll_1"
+        android:layout_alignTop="@id/event_search_ll_1"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/event_search_pop_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pop_area_height"
+        android:layout_below="@+id/event_search_ll_0"
+        android:background="@drawable/main_dropdown_list_bkg_left"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+        <ListView
+            android:id="@+id/event_search_lv_area"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:dividerHeight="1dp"
+            android:fadingEdge="none"
+            android:divider="@color/gray_stroke"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/event_search_ll_area_all"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="@color/gray_background"
+            android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/event_search_tv_area_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_margin="8dp"
+        	android:padding="8dp"
+        	android:singleLine="true"
+        	android:textSize="@dimen/textsize_text"
+        	android:background="@drawable/selector_button_tran_gray"
+            android:text="全城" />
+            
+        </LinearLayout>
+        <GridView
+            android:id="@+id/event_search_gv_area"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:fadingEdge="none"
+            android:background="@color/gray_background"
+            android:visibility="gone"
+            android:numColumns="2" />
+    </LinearLayout>
+    <GridView
+        android:id="@+id/event_search_gv_type"
+        android:numColumns="3"
+        android:fadingEdge="none"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_search_ll_0"
+        android:background="@drawable/main_dropdown_list_bkg_center"
+         />
+    <LinearLayout
+        android:id="@+id/event_search_pop_time"
+        android:layout_width="@dimen/pop_item_width0"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_search_ll_0"
+        android:background="@drawable/main_dropdown_list_bkg_right"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/event_search_time_0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="不限" />
+        <View style="@style/line_gray_stroke_h" />
+        <TextView
+            android:id="@+id/event_search_time_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="今天" />
+        <View style="@style/line_gray_stroke_h" />
+        <TextView
+            android:id="@+id/event_search_time_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="三天内" />
+        <View style="@style/line_gray_stroke_h" />
+        <TextView
+            android:id="@+id/event_search_time_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="一周内" />
+        <View style="@style/line_gray_stroke_h" />
+        <TextView
+            android:id="@+id/event_search_time_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="一月内" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/event_search_pop_state"
+        android:layout_width="@dimen/pop_item_width0"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_search_ll_1"
+        android:background="@drawable/main_dropdown_list_bkg_left"
+        android:visibility="gone"
+        android:orientation="vertical" >
+       <TextView
+            android:id="@+id/event_search_prog_0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="不限" />
+        <View style="@style/line_gray_stroke_h" />
+        <TextView
+            android:id="@+id/event_search_prog_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="正在报名" />
+        <View style="@style/line_gray_stroke_h" />
+        <TextView
+            android:id="@+id/event_search_prog_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="即将开始" />
+        <View style="@style/line_gray_stroke_h" />
+        <TextView
+            android:id="@+id/event_search_prog_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="进行中" />
+        <View style="@style/line_gray_stroke_h" />
+        <TextView
+            android:id="@+id/event_search_prog_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="已结束" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/event_search_pop_price"
+        android:layout_width="@dimen/pop_item_width1"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_search_ll_1"
+        android:background="@drawable/main_dropdown_list_bkg_center"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:orientation="vertical" >
+        <TextView
+            android:id="@+id/event_search_price_0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="默认" />
+        <View style="@style/line_gray_stroke_h" />
+        <TextView
+            android:id="@+id/event_search_price_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="人均由少到多" />
+        <View style="@style/line_gray_stroke_h" />
+        <TextView
+            android:id="@+id/event_search_price_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center"
+            android:background="@drawable/selector_button_tran_gray"
+            android:textSize="@dimen/textsize_text"
+            android:text="人均由多到少" />
+    </LinearLayout>
+    <TextView 
+        android:id="@+id/tv_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:text="很抱歉，没有您想要的结果"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_below="@+id/event_search_line"
+        />
+</RelativeLayout>

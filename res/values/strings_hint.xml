@@ -1,0 +1,53 @@
+<resources>
+
+    <string name="setting_addr_work_input">请输入您的工作地址</string>
+    <string name="setting_addr_home_input">请输入您的居住地址</string>
+    <string name="setting_time_work_input">8:00 ~ 20:00</string>
+    <string name="setting_time_home_input">22:00 ~ 5:00</string>
+    <string name="setting_time_work_wrong">工作时间需大于1小时</string>
+    <string name="setting_time_home_wrong">休息时间需大于1小时</string>
+    <string name="setting_time_input_right">保存成功</string>
+    <string name="setting_default_input">欢迎提出宝贵建议和意见，您留下的每个字都将被用来改善我们的产品。</string>
+    <string name="setting_input_wrong">反馈内容为5-140个字</string>
+    <string name="setting_input_right">发送成功</string>
+    <string name="mobile_unauthorized">未认证</string>
+    <string name="mobile_authorized_success">修改</string>
+    <string name="identity_unauthorized">未认证</string>
+    <string name="identity_checking">审核中</string>
+    <string name="identity_authorized_success">审核未通过</string>
+    <string name="identity_authorized_fail">已认证</string>
+    <string name="name_not_filled">请填写</string>
+    <string name="name_authorized_success">提取身份认证的姓名</string>
+    <string name="qq_wrong">请输入正确的QQ号</string>
+    <string name="wechat_wrong">请输入正确的微信号</string>
+    <string name="msn_wrong">请输入正确的MSN</string>
+    <string name="blog_wrong">请输入正确的微博地址</string>
+    <string name="real_name_default">请填写您身份证上的姓名</string>
+    <string name="real_name_null">请填写姓名，2-8个字</string>
+    <string name="real_name_wrong">姓名输入不正确</string>
+    <string name="birthday_null">请填写生日</string>
+    <string name="id_default">请填写您的身份证号码</string>
+    <string name="id_null">请填写您的身份证号码</string>
+    <string name="id_wrong">请填写正确的身份证号码</string>
+    <string name="uploading_success">上传成功，请等待审核</string>
+    <string name="uploading_fail_big">请上传小于2M的图片</string>
+    <string name="uploading_fail_type">图片仅支持JPG、GIF、PNG和BMP格式</string>
+    <string name="uploading_fail_net">网络连接异常，请稍后再试</string>
+    <string name="state_checking">正在审核中</string>
+    <string name="state_check_fail">审核未通过</string>
+    <string name="state_reason">提取后台审核人填写信息</string>
+    <string name="publish_default">点击发布闲人预告</string>
+    <string name="signature_default">请填写</string>
+    <string name="tag">TA还没有添加标签</string>
+    <string name="fill_out">请填写</string>
+    <string name="beging_time_null">请输入开始时间</string>
+    <string name="end_time_null">请输入结束时间</string>
+    <string name="idler_talk_null">请输入闲人宣言，2-50个字</string>
+    <string name="idler_talk_wrong">闲人宣言为2-50个字</string>
+    <string name="idler_talk_success">发布成功</string>
+    <string name="input_wrong">签名内容在30个字以内</string>
+    <string name="tag_more">兴趣标签最多10个</string>
+    <string name="tag_wrong">标签字数为1-8个字，支持汉字和英文字母</string>
+    <string name="tag_success">标签添加成功</string>
+
+</resources>

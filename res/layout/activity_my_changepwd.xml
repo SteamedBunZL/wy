@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/mycp_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/mycp_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="修改密码" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mycp_ll_old"
+        style="@style/info_item_top" >
+
+        <TextView
+            style="@style/info_item_title"
+            android:text="原密码：" />
+
+        <!-- <EditText
+            android:id="@+id/mycp_et_old"
+            style="@style/edittext_white" /> -->
+        <com.whoyao.widget.ClearEditText
+            android:id="@+id/mycp_et_old"
+            android:imeOptions="actionNext"
+            android:inputType="textVisiblePassword"
+            android:hint="请输入原密码"
+            style="@style/edittext_white" />	
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mycp_ll_new"
+        style="@style/info_item_bottom" >
+
+        <TextView
+            style="@style/info_item_title"
+            android:text="新密码：" />
+
+        <!-- <EditText
+            android:id="@+id/mycp_et_new"
+            style="@style/edittext_white" /> -->
+        <com.whoyao.widget.ClearEditText
+            android:id="@+id/mycp_et_new"
+            android:imeOptions="actionDone"
+            android:inputType="textVisiblePassword"
+            android:hint="请输入新密码"
+            style="@style/edittext_white" />
+    </LinearLayout>
+    <Button 
+        android:id="@+id/mycp_btn_enter"
+        style="@style/button_big"
+        android:text="@string/enter" />
+</LinearLayout>

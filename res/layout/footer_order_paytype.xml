@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_background"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/footer_cart_tv_count"
+        style="@style/textview_text"
+        android:text="选择支付方式："
+        android:textSize="@dimen/textsize_button" />
+
+    <RelativeLayout
+        android:id="@+id/footer_order_rl_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/footer_order_label_balance"
+            style="@style/textview_text"
+            android:text="当前账户余额：" />
+
+        <TextView
+            android:id="@+id/footer_order_tv_balance"
+            style="@style/textview_text"
+            android:layout_toRightOf="@id/footer_order_label_balance"
+            android:textColor="@color/red_text" />
+
+        <LinearLayout
+            android:id="@+id/footer_order_ll_use_balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/footer_order_label_balance"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rectangle_radius_white"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/footer_order_rl_use_balance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+
+                <ImageView
+                    android:id="@+id/footer_order_iv_use_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/selector_checkbox_carmine" />
+
+                <TextView
+                    android:id="@+id/footer_order_label_use_balance"
+                    style="@style/textview_text"
+                    android:text="使用账户余额支付：" />
+
+                <TextView
+                    android:id="@+id/footer_order_tv_balance_detial"
+                    style="@style/textview_subtext"
+                    android:layout_below="@id/footer_order_label_use_balance" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/footer_order_line_pwd"
+                style="@style/line_gray_h"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/footer_order_et_pwd"
+                style="@style/edittext_white"
+                android:visibility="gone"
+                android:hint="输入帐户资产支付密码"
+                android:inputType="textPassword" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/footer_order_label_alipay"
+            style="@style/textview_text"
+            android:text="使用支付宝支付：" />
+
+        <TextView
+            android:id="@+id/footer_order_tv_alipay"
+            style="@style/textview_text"
+            android:textColor="@color/red_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/rectangle_radius_white"
+        android:orientation="vertical"
+        android:paddingTop="10dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:id="@+id/footer_order_iv_client_alipay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_checkbox_carmine" />
+
+            <TextView
+                android:id="@+id/footer_order_label_client_alipay"
+                style="@style/textview_text"
+                android:text="支付宝钱包客户端支付：" />
+
+            <TextView
+                style="@style/textview_subtext"
+                android:text="推荐已安装支付宝钱包客户端的用户使用"
+                android:layout_below="@id/footer_order_label_client_alipay" />
+        </RelativeLayout>
+
+        <View
+            style="@style/line_gray_h"
+            android:layout_marginBottom="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:id="@+id/footer_order_iv_web_alipay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/selector_checkbox_carmine" />
+
+            <TextView
+                android:id="@+id/footer_order_label_web_alipay"
+                style="@style/textview_text"
+                android:text="支付宝网页支付：" />
+
+            <TextView
+                style="@style/textview_subtext"
+                android:text="推荐有支付宝账户的用户使用"
+                android:layout_below="@id/footer_order_label_web_alipay" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

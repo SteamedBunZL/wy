@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/regpi_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="支付成功" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/right"
+            android:gravity="center"
+            android:text="   恭喜您，场地预订成功！" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/success_tv_mybill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_radius_blue"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="查看我的订单"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/success_tv_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_radius_blue"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="10dp"
+            android:text="立即发布活动"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:text="温馨提示" />
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="1.接收短信完全免费，所订场地一经售出，不退不换，请务必按时到场。"
+        />
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="2.如有不可抗力因素（包括政府行为等）造成体育场馆不能按照预订时间使用的，请致电互邀网客服，核实后互邀网将为您全额退还未消费部分的款项。"
+        />
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="3.用户因在体育场馆受到意外伤害或运动损伤的，互邀网不承担责任。"
+        />
+
+</LinearLayout>

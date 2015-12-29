@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rete_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="订单详情" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rete_rl_title" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/billdetail_ordernumber_ll"
+                style="@style/info_item_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="白"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:layout_marginLeft="0dp"
+                    android:text="订单号" />
+
+                <TextView
+                    android:id="@+id/billdetail_ordernumber_tv"
+                    style="@style/info_item_content"
+                    android:drawableRight="@null"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/billdetail_venuename_ll"
+                style="@style/info_item_middle"
+                android:background="@drawable/rectangle_radius_white_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="场馆名称" />
+
+                <TextView
+                    android:id="@+id/billdetail_venuename_tv"
+                    style="@style/info_item_content"
+                    android:layout_marginLeft="0dp"
+                    android:drawableRight="@null"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/billdetail_money_ll"
+                style="@style/info_item_middle"
+                android:background="@drawable/rectangle_radius_white_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:textColor="@android:color/white"
+                    android:text="白白" />
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:layout_marginLeft="0dp"
+                    android:text="金额" />
+
+                <TextView
+                    android:id="@+id/billdetail_money_tv"
+                    style="@style/info_item_content"
+                    android:layout_marginLeft="0dp"
+                    android:drawableRight="@null"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/info_item_middle"
+                android:background="@drawable/rectangle_radius_white_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="下单时间" />
+
+                <TextView
+                    android:id="@+id/billdetail_time_tv"
+                    style="@style/info_item_content"
+                    android:layout_marginLeft="0dp"
+                    android:drawableRight="@null"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/info_item_middle"
+                android:background="@drawable/rectangle_radius_white_middle"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:drawableRight="@null"
+                    android:text="支付状态" />
+
+                <TextView
+                    android:id="@+id/billdetail_paystate_tv"
+                    style="@style/info_item_content"
+                    android:layout_marginLeft="0dp"
+                    android:drawableRight="@null"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rectangle_radius_white_bottom"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_site_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:drawableRight="@null"
+                    android:text="场次信息"
+                    android:textSize="@dimen/textsize_text" />
+
+                <LinearLayout
+                    android:id="@+id/sub_venue_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_site_num"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tv_site_num"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/billdetail_waitpay_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@color/black_t"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/cancelorder_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_radius_gray_2"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="10dp"
+            android:text="取消订单"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/payorder_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rectangle_radius_blue"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:paddingTop="10dp"
+            android:text="支付订单"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sendmessage_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_t"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/sendmessage_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="发送手机验证码"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+</RelativeLayout>

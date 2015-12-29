@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+        <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            android:onClick="finish"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="人员管理" />
+    </RelativeLayout>
+
+        <ListView
+            android:id="@+id/joiner_mgr_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbarStyle="outsideOverlay"
+            android:dividerHeight="10dp"
+            android:divider="@android:color/transparent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+        </ListView>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/blue_bar"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textsize_text"
+        android:paddingLeft="15dip"
+  		android:paddingTop="5dp"
+  		android:paddingBottom="5dp"
+        android:text="已定位城市" />
+
+    <TextView
+        android:id="@+id/city_header_tv_loc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:clickable="false"
+        android:background="@drawable/selector_white"
+        android:textSize="@dimen/textsize_text"
+        android:text="正在定位..."/>
+
+    <TextView
+        android:id="@+id/city_header_tv_reg_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_bar"
+        android:textColor="@android:color/white"
+        android:paddingLeft="15dip"
+  		android:paddingTop="5dp"
+  		android:paddingBottom="5dp"
+        android:textSize="@dimen/textsize_text"
+        android:text="注册填写城市"/>
+
+    <TextView
+        android:id="@+id/city_header_tv_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:clickable="false"
+        android:textSize="@dimen/textsize_text"
+        android:background="@drawable/selector_white" />
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@color/blue_bar"
+        android:textColor="@android:color/white"
+        android:paddingLeft="15dip"
+  		android:paddingTop="5dp"
+  		android:paddingBottom="5dp"
+        android:textSize="@dimen/textsize_text"
+        android:text="所有城市"/>
+</LinearLayout>

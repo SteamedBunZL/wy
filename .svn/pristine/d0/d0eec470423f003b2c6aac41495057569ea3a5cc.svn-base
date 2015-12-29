@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background" >
+
+    <RelativeLayout
+        android:id="@+id/event_search_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back_initial"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="选择标签" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event_search_title" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/topic_search_ll_hot_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rectangle_radius_white"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请选择标签"
+                    android:textSize="@dimen/textsize_button" />
+
+                <com.whoyao.widget.NoScrollGridView
+                    android:id="@+id/gv_topic_choice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:horizontalSpacing="10dp"
+                    android:numColumns="4"
+                    android:verticalSpacing="10dp" >
+                </com.whoyao.widget.NoScrollGridView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_free"
+                style="@style/button_big"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/topic_search_ll_hot_area"
+                android:background="@drawable/selector_button_gary_blue"
+                android:text="填写自定义标签" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black" >
+        <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="取消照片" />
+        
+        <Button
+            android:id="@+id/page_btn_delete"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:background="@drawable/delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+		<org.taptwo.widget.ViewFlow
+		    android:id="@+id/event_photo_vp"
+		    android:spacing="10dp"
+            android:layout_below="@+id/page_rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+<!-- 		<android.support.v4.view.ViewPager
+		    android:id="@+id/event_photo_vp"
+		    android:spacing="10dp"
+            android:layout_below="@+id/page_rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" /> -->
+        
+</RelativeLayout>

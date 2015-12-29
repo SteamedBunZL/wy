@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="我的话题" />
+        
+        <Button
+            android:id="@+id/page_btn_right"
+            style="@style/page_backbtn"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_button_topic_add" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/topic_self_ll_button"
+        style="@style/radio_group_top"
+        android:background="@color/gray_e4"
+        android:layout_below="@id/page_rl_title" >
+
+        <RadioButton
+            android:id="@+id/topic_self_btn_creat"
+            style="@style/radio_button_top"
+            android:checked="true"
+            android:background="@drawable/selector_button_header_left"
+            android:text="我发布的" />
+
+        <RadioButton
+            android:id="@+id/topic_self_btn_join"
+            style="@style/radio_button_top"
+            android:background="@drawable/selector_button_header_right"
+            android:text="我回复的" />
+    </RadioGroup>
+
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/topic_self_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topic_self_ll_button"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:headerDividersEnabled="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false" />
+	<TextView
+	    android:id="@+id/topic_user_empty"
+	    style="@style/textview_text"
+	    android:layout_centerInParent="true"
+	    android:visibility="gone"
+	    android:textColor="@color/gray_text" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/topic_self_ll_button"
+        android:background="@drawable/shadow_top" />
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/more_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="编辑标签" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/mytag_tv_event_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="我的活动标签"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/textsize_text" />
+<!--             android:hint="我喜欢以下活动" -->
+
+        <ListView
+            android:id="@+id/mytag_lv_event_tag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/mytag_tv_event_label"
+            android:layout_marginTop="10dp"
+            android:padding="1dp"
+            android:scrollbarStyle="outsideOverlay"
+            android:background="@drawable/rectangle_radius_white" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp" >
+
+        <TextView
+            android:id="@+id/mytag_tv_intrest_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="10dp"
+            android:text="我的兴趣标签"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:textSize="@dimen/textsize_text" />
+<!--             android:hint="我对以下标签感兴趣" -->
+
+        <TextView
+            android:id="@+id/mytag_tv_next_interest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/blue_text"
+            android:text="换一换" />
+
+        <ListView
+            android:id="@+id/mytag_lv_interest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scrollbarStyle="outsideOverlay"
+            android:padding="1dp"
+            android:layout_below="@id/mytag_tv_next_interest"
+            android:background="@drawable/rectangle_radius_white" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/mytag_btn_add"
+        style="@style/button_big"
+        android:layout_margin="10dp"
+        android:text="添加其他兴趣标签" />
+
+</LinearLayout>

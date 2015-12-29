@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="帮助与反馈" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/about_tv_copyright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:hint="Copyright © 2012 Reuniontech Co.Ltd All Rights Reserved."
+        android:textSize="@dimen/textsize_copyright" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/about_tv_copyright"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/help_tv_service_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:text="客服电话"
+            android:textColor="@color/blue_text"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:text=" | "
+            android:textColor="@color/blue_text"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:id="@+id/help_tv_service_weibo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:text="官方微博"
+            android:textColor="@color/blue_text"
+            android:textSize="@dimen/textsize_text" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/help_label_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/page_rl_title"
+        android:layout_margin="10dp"
+        android:text="帮助"
+        android:textSize="@dimen/textsize_text" />
+
+    <RelativeLayout
+        android:id="@+id/help_rl_function"
+        style="@style/info_item_top"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/help_label_help"
+        android:layout_marginTop="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/help_tv_function"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:drawableRight="@drawable/selector_arrow"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="1.互邀V3.0版主要功能有哪些？"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:id="@+id/help_content_function"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/help_tv_function"
+            android:hint="V3.0版本可以供您发起活动或参加自己感兴趣的活动，发布和讨论自己感兴趣的话题，找到志同道合的朋友！"
+            android:paddingBottom="10dp"
+            android:textSize="@dimen/textsize_subtext"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/help_rl_charge"
+        style="@style/info_item_middle"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/help_rl_function"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/help_tv_charge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:drawableRight="@drawable/selector_arrow"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="2.使用是否需要收费？"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:id="@+id/help_content_charge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/help_tv_charge"
+            android:hint="互邀网本身不收取流量费，发布即时活动或短信通知时会收取相应短信费用。"
+            android:paddingBottom="10dp"
+            android:textSize="@dimen/textsize_subtext"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/help_rl_howto"
+        style="@style/info_item_bottom"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/help_rl_charge"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <TextView
+            android:id="@+id/help_tv_howto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:drawableRight="@drawable/selector_arrow"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="3.如何注销互邀客户端？"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:id="@+id/help_content_howto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/help_tv_howto"
+            android:hint="进入设置页面注销软件，注销后将不能接收到新的信息。如需即时接收信息，请保持后台运行即可。"
+            android:paddingBottom="10dp"
+            android:textSize="@dimen/textsize_subtext"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/help_tv_feedback"
+        style="@style/edittext_big"
+        android:layout_below="@+id/help_rl_howto"
+        android:drawableRight="@drawable/arrow_right"
+        android:text="意见反馈" />
+
+</RelativeLayout>

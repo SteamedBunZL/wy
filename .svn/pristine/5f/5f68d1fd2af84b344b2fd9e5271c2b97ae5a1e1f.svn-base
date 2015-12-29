@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+    
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="选择省份" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/chaddr_lv"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="@drawable/rectangle_radius_white"
+        android:dividerHeight="1dp"
+        
+        android:divider="@color/gray_stroke"
+        style="@style/listview" >
+        
+    </ListView>
+</LinearLayout>

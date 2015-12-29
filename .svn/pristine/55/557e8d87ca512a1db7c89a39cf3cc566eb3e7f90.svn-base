@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_container"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/event_tv_city"
+            style="@style/page_title"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:maxEms="5"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:drawableRight="@drawable/xiala"
+            android:text="北京市" />
+
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="@string/event_title" />
+
+        <ImageView
+            android:id="@+id/event_iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/selector_button_search" />
+
+        <ImageView
+            android:id="@+id/event_iv_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/event_iv_search"
+            android:src="@drawable/selector_button_event_map" />
+    </RelativeLayout>
+
+<!--     <ListView
+        android:id="@+id/event_lv"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:scrollbarStyle="outsideOverlay"
+        android:divider="@android:color/transparent"
+        android:layout_below="@+id/page_rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>   -->
+
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/event_lv"
+        android:layout_below="@+id/page_rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp" />
+
+	<include layout="@layout/empty_event" />
+
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rete_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/invite_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/page_title"
+            android:text="发新话题" />
+
+        <TextView
+            android:id="@+id/tv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/camera"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/event_add_ll_info0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rete_rl_title"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/ll_tag"
+                style="@style/info_item_top"
+                android:background="@drawable/rectangle_radius_white_top"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/info_item_title"
+                    android:text="标签" />
+
+                <TextView
+                    android:id="@+id/tv_tag"
+                    style="@style/info_item_content"
+                    android:background="@null"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    style="@style/info_item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                style="@style/info_item_middle"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/info_item_title"
+                    android:text="标题" />
+
+                <EditText
+                    android:id="@+id/et_title"
+                    style="@style/info_item_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:drawableRight="@null"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/selector_radius_bottom"
+                android:orientation="horizontal"
+                android:paddingTop="10dp" >
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    style="@style/info_item_title"
+                    android:layout_centerVertical="false"
+                    android:gravity="left|top"
+                    android:text="内容" />
+
+                <EditText
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@id/tv_content"
+                    android:background="@null"
+                    android:gravity="left|top"
+                    android:minLines="5"
+                    android:textSize="@dimen/textsize_text" >
+                </EditText>
+
+                <TextView
+                    android:id="@+id/topic_content_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/et_content"
+                    android:layout_marginRight="10dp"
+                    android:text="0/500"
+                    android:textColor="@color/gray_text" />
+            </RelativeLayout>
+
+            <com.whoyao.widget.NoScrollGridView
+                android:id="@+id/event_photo_add_gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:cacheColorHint="#00000000"
+                android:fadingEdge="@null"
+                android:horizontalSpacing="10dp"
+                android:minHeight="50dp"
+                android:numColumns="4"
+                android:verticalSpacing="10dp" >
+            </com.whoyao.widget.NoScrollGridView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一次最多上传8张图片"
+                android:layout_marginLeft="10dp"
+                android:textSize="@dimen/textsize_subtext" />
+
+            <Button
+                android:id="@+id/btn_add"
+                style="@style/button_big"
+                android:layout_below="@id/event_add_ll_info0"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:text="发布" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="找场馆" />
+         <ImageView
+            android:id="@+id/event_iv_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/selector_button_event_map" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/user_search_ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/page_rl_title"
+        android:background="@android:color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangle_round_gray"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp" >
+
+            <EditText
+                android:id="@+id/user_search_et"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:drawableLeft="@drawable/search_icon"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize_eidt" />
+
+            <ImageView
+                android:id="@+id/user_search_iv_clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/selector_clear_white"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/user_search_tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/rectangle_round_blue_active"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="@string/cancel"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_eidt"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/user_search_line"
+        style="@style/line_gray_stroke_h"
+        android:layout_height="1dp"
+        android:layout_below="@+id/user_search_ll_0" />
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/user_search_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/user_search_line"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" />
+
+    <View
+        android:id="@+id/user_search_shadow_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/user_search_ll_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_search_ll_search"
+        android:background="@color/gray_e8"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="3dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:paddingTop="3dp" >
+
+        <LinearLayout
+            android:id="@+id/user_search_ll_area"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/user_search_tv_area"
+                style="@style/event_search_filter_text"
+                android:text="区域 " />
+        </LinearLayout>
+
+        
+
+        <LinearLayout
+            android:id="@+id/venue_search_ll_item"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/venue_search_tv_item"
+                style="@style/event_search_filter_text"
+                android:text="项目" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_search_pop_area"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/pop_area_height"
+        android:layout_below="@+id/user_search_ll_0"
+        android:background="@drawable/main_dropdown_list_bkg_left"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="@dimen/pop_area_left_width"
+            android:layout_height="match_parent" >
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@color/gray_stroke" />
+
+            <TextView
+                android:id="@+id/user_search_tv_nearby"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pop_item_height"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/selector_tran_gray_background"
+                android:gravity="center"
+                android:text="附近" />
+
+            <View
+                android:id="@+id/item_pop_line_h_0"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/user_search_tv_nearby"
+                android:background="@color/gray_stroke" />
+
+            <TextView
+                android:id="@+id/user_search_tv_city"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pop_item_height"
+                android:layout_below="@+id/item_pop_line_h_0"
+                android:background="@drawable/selector_tran_gray_background"
+                android:gravity="center"
+                android:text="全城" />
+
+            <View
+                android:id="@+id/item_pop_line_h_1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/user_search_tv_city"
+                android:background="@color/gray_stroke" />
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/user_search_gv_area"
+            android:layout_width="@dimen/pop_area_right_width"
+            android:layout_height="match_parent"
+            android:background="@color/gray_background"
+            android:fadingEdge="none"
+            android:numColumns="2"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/user_search_ll_distance"
+            android:layout_width="@dimen/pop_area_right_half_width"
+            android:layout_height="match_parent"
+            android:background="@color/gray_background"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <TextView
+                android:id="@+id/user_search_tv_distance_500"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pop_item_height"
+                android:background="@drawable/selector_button_tran_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="500m" />
+
+            <View style="@style/line_gray_dash_h" />
+
+            <TextView
+                android:id="@+id/user_search_tv_distance_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pop_item_height"
+                android:background="@drawable/selector_button_tran_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="1km" />
+
+            <View style="@style/line_gray_dash_h" />
+
+            <TextView
+                android:id="@+id/user_search_tv_distance_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pop_item_height"
+                android:background="@drawable/selector_button_tran_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="2km" />
+
+            <View style="@style/line_gray_dash_h" />
+
+            <TextView
+                android:id="@+id/user_search_tv_distance_5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pop_item_height"
+                android:background="@drawable/selector_button_tran_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="5km" />
+
+            <View style="@style/line_gray_dash_h" />
+
+            <TextView
+                android:id="@+id/user_search_tv_distance_7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/pop_item_height"
+                android:background="@drawable/selector_button_tran_gray"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="7km" />
+
+            <View style="@style/line_gray_dash_h" />
+        </LinearLayout>
+    </LinearLayout>
+   
+    <LinearLayout
+        android:id="@+id/venue_search_pop_item"
+        android:layout_width="@dimen/pop_item_width0"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/user_search_ll_0"
+        android:background="@drawable/main_dropdown_list_bkg_center"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/user_search_age_0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="羽毛球"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/user_search_age_0_18"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="网球"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/user_search_age_18_25"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="乒乓球"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/user_search_age_25_28"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="篮球"
+            android:textSize="@dimen/textsize_text" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/user_search_age_28_32"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="足球"
+            android:textSize="@dimen/textsize_text" />
+
+     
+        
+    </LinearLayout>
+
+</RelativeLayout>

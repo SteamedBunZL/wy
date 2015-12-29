@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/smenu_background"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:scaleType="fitStart" >
+
+    <ImageView
+        android:id="@+id/smenu_logo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="center"
+        android:src="@drawable/logo" />
+
+    <View style="@style/line_gray_h" >
+    </View>
+
+    <TextView
+        android:id="@+id/smenu_home"
+        style="@style/smenu_item"
+        android:drawableLeft="@drawable/selector_smenu_home"
+        android:text=" 首页" />
+
+    <View style="@style/line_gray_h" >
+    </View>
+
+    <TextView
+        android:id="@+id/smenu_event"
+        style="@style/smenu_item"
+        android:drawableLeft="@drawable/selector_smenu_event"
+        android:text=" 活动" />
+
+    <View style="@style/line_gray_h" >
+    </View>
+
+    <TextView
+        android:id="@+id/smenu_venue"
+        style="@style/smenu_item"
+        android:drawableLeft="@drawable/selector_smenu_venue"
+        android:text=" 场馆" />
+
+    <View style="@style/line_gray_h" >
+    </View>
+
+    <TextView
+        android:id="@+id/smenu_topic"
+        style="@style/smenu_item"
+        android:drawableLeft="@drawable/selector_smenu_topic"
+        android:text=" 话题" />
+
+    <View style="@style/line_gray_h" >
+    </View>
+
+    <TextView
+        android:id="@+id/smenu_user"
+        style="@style/smenu_item"
+        android:drawableLeft="@drawable/selector_smenu_friend"
+        android:text=" 朋友" />
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+<LinearLayout
+    android:id="@+id/empty_user_sametag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="visible" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_text"
+            android:textColor="@color/gray_text"
+            android:text="为了找到更多与你兴趣相同的人，" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_text"
+            android:textColor="@color/gray_text"
+            android:text="先给自己添加标签吧！" />
+
+    <TextView
+        android:id="@+id/empty_user_sametag_add"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_round_btn_blue"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="去添加标签"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/textsize_title" />
+</LinearLayout>
+
+</LinearLayout>

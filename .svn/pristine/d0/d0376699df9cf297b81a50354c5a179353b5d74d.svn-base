@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/rete_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="找场地" />
+    </RelativeLayout>
+
+    <GridView
+        android:layout_margin="10dp"
+        android:id="@+id/gv_site_type"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdgeLength="0dp"
+        android:gravity="center_horizontal"
+        android:horizontalSpacing="10dp"
+        android:numColumns="2"
+        android:verticalSpacing="10dp" >
+    </GridView>
+
+</LinearLayout>

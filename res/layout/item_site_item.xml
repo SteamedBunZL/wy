@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_ll_site_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rectangle_radius_white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/item_tv_site_venuename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="北京首都体育学院"
+            android:textSize="@dimen/textsize_text" />
+
+        <TextView
+            android:id="@+id/item_tv_site_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:text="￥25/时"
+            android:textColor="@color/red_text" />
+
+        <TextView
+            android:id="@+id/item_tv_site_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_tv_site_venuename"
+            android:layout_margin="5dp"
+            android:drawableLeft="@drawable/adresss"
+            android:text="北京海滨区中关村路"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/textsize_copyright" />
+
+        <TextView
+            android:id="@+id/item_tv_site_distances"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/item_tv_site_price"
+            android:text="32KM"
+            android:layout_margin="5dp"
+            android:textColor="@color/carmine_text"
+            android:textSize="@dimen/textsize_copyright" />
+
+        <View
+            android:id="@+id/item_pop_line_h"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/item_tv_site_address"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/line_dash_h" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_convertview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <!--
+    <RelativeLayout
+        android:id="@+id/rl_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_left_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2013.09.06 06:00-07:00" />
+
+        <TextView
+            android:id="@+id/tv_right_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="空闲11场" />
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_left_2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/line_dash_h" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_left_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2013.09.06 06:00-07:00" />
+
+        <TextView
+            android:id="@+id/tv_right_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="空闲11场" />
+
+        <View
+            android:id="@+id/line_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_left_3"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/line_dash_h" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_left_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2013.09.06 06:00-07:00" />
+
+        <TextView
+            android:id="@+id/tv_right_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="空闲11场" />
+
+        <View
+            android:id="@+id/line_4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_left_4"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/line_dash_h" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_left_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2013.09.06 06:00-07:00" />
+
+        <TextView
+            android:id="@+id/tv_right_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="空闲11场" />
+
+        <View
+            android:id="@+id/line_5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_left_5"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/line_dash_h" />
+    </RelativeLayout>
+    -->
+
+</LinearLayout>

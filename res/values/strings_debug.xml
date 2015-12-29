@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 发布时请将内容置为"" -->
+    <!-- <string name="infilling">填充</string> -->
+    <!-- 发布时请将内容置为"" -->
+    <!-- <string name="infilling_num">0</string> -->
+    <!-- 发布时请将内容置为"" -->
+    <!-- <string name="infilling_time">2014.01.01 10:30</string> -->
+    <string name="infilling"></string>
+    <string name="infilling_num"></string>
+    <string name="infilling_time"></string>
+
+</resources>

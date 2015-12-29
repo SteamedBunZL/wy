@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gray_background" >
+
+        <RelativeLayout
+        	android:id="@+id/regpi_rl_title"
+        	style="@style/page_titlebar" >
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+        <TextView
+            style="@style/page_title"
+            android:text="上传照片" />
+    </RelativeLayout>
+	<com.whoyao.widget.ClearEditText
+	    android:id="@+id/event_photo_add_et"
+	    style="@style/edittext_big"
+	   	android:hint="输入图片标题，20个字以内" />
+	<GridView
+	    android:id="@+id/event_photo_add_gv"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:minHeight="50dp"
+	    android:fadingEdge="@null"
+	    android:cacheColorHint="#00000000"
+	    android:horizontalSpacing="10dp"
+	    android:verticalSpacing="10dp"
+	    android:numColumns="4" />
+	<TextView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="10dp"
+	    android:text="最多可一次上传9张图片" />
+	<Button
+	    android:id="@+id/event_photo_add_btn"
+	    style="@style/button_big"
+	    android:text="完成" />
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/image_face_width"
+    android:layout_height="@dimen/image_height"
+    android:padding="5dp"
+	android:background="@drawable/selector_imagegrid_item_bg"  >
+<!--  -->
+    <ImageView
+        android:id="@+id/item_iv_photo"
+        android:layout_width="@dimen/image_grid"
+        android:layout_height="@dimen/image_grid"
+        android:layout_gravity="center"
+        android:src="@drawable/default_face" />
+
+    <TextView
+        android:id="@+id/joinergrid_item_tv_initiator"
+        android:visibility="gone"
+        android:layout_width="@dimen/image_grid"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:gravity="center_horizontal"
+        android:background="#50000000"
+        android:textSize="@dimen/textsize_copyright"
+        android:textColor="@android:color/white"
+        android:text="发起人" />
+
+</FrameLayout>

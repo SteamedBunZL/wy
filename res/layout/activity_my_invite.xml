@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/my_invite_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="我的邀请" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_invite_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/page_rl_title"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp" >
+
+        <RadioGroup
+            android:id="@+id/rg_invite_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_invite_receive"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:background="@drawable/selector_button_header_left"
+                android:button="@null"
+                android:checked="true"
+                android:clickable="true"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="收到的邀请"
+                android:textColor="@drawable/selector_color_gary_white"
+                android:textSize="@dimen/textsize_text" />
+
+            <RadioButton
+                android:id="@+id/rb_invite_send"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_weight="1"
+                android:background="@drawable/selector_button_header_right"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="发出的邀请"
+                android:textColor="@drawable/selector_color_gary_white"
+                android:textSize="@dimen/textsize_text" />
+        </RadioGroup>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/invite_my_ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_invite_title"
+        android:background="@color/gray_e4"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <LinearLayout
+            android:id="@+id/invite_my_ll_order"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/invite_my_tv_order"
+                style="@style/event_search_filter_text"
+                android:text="时间排序" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/invite_my_ll_state"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/invite_my_tv_state"
+                style="@style/event_search_filter_text"
+                android:text="状态" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rl_invite_title"
+        android:background="@drawable/shadow_top" />
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/my_invite_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/invite_my_ll_filter"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:headerDividersEnabled="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false" />
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/invite_my_ll_filter"
+        android:gravity="center"
+        android:text="您还没有收到过邀请哦!"
+        android:textColor="@color/gray_text"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/invite_my_shadow_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/invite_my_ll_filter"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/invite_my_shadow_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/invite_my_ll_filter"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/invite_my_pop_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/invite_my_ll_filter"
+        android:background="@drawable/main_dropdown_list_bkg_center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/invite_my_order_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="不限" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/invite_my_order_2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="按邀请时间由远及近" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/invite_my_order_3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="按邀请时间由近及远" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/invite_my_pop_state"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/invite_my_ll_filter"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/main_dropdown_list_bkg_right"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/invite_my_state_5"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="不限" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/invite_my_state_0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="未处理" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/invite_my_state_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="已拒绝" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/invite_my_state_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="已过期" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/invite_my_state_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/pop_item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="已接受" />
+    </LinearLayout>
+
+</RelativeLayout>

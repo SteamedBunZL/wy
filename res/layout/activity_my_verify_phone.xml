@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="认证手机号" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/verifyphone_rl_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp" >
+
+        <TextView
+            android:id="@+id/verifyphone_tv_step1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="输入手机号" />
+
+        <TextView
+            android:id="@+id/verifyphone_tv_step2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="获取验证码"
+            android:textColor="@color/gray_text" />
+
+        <TextView
+            android:id="@+id/verifyphone_tv_step3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="认证成功"
+            android:textColor="@color/gray_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/verifyphone_tv_step2"
+            android:layout_toRightOf="@id/verifyphone_tv_step1"
+            android:gravity="center"
+            android:hint=">" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/verifyphone_tv_step3"
+            android:layout_toRightOf="@id/verifyphone_tv_step2"
+            android:gravity="center"
+            android:hint=">" />
+    </RelativeLayout>
+
+    <com.whoyao.widget.ClearEditText
+        android:id="@+id/verifyphone_et_phone"
+        style="@style/edittext_big"
+        android:ems="10"
+        android:hint="@string/hint_input_phone"
+        android:imeOptions="actionGo"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/verifyphone_btn_sendcode"
+        style="@style/button_big"
+        android:layout_marginTop="10dp"
+        android:text="@string/send_vcode" />
+
+    <Button
+        android:id="@+id/verifyphone_btn_resendcode"
+        style="@style/button_resend_sms"
+        android:visibility="gone" />
+    
+</LinearLayout>

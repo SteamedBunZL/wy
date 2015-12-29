@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 左、右边二级菜单 用户头像  -->
+    <style name="style_homepage_userface">
+        <item name="android:layout_width">20dip</item>
+        <item name="android:layout_height">20dip</item>
+    </style>
+
+    
+    <style name="smenu_item">
+        <item name="android:textColor">@drawable/selector_color_gary</item>
+        <item name="android:textSize">@dimen/textsize_button</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingTop">@dimen/smenu_item_padding_top</item>
+        <item name="android:paddingBottom">@dimen/smenu_item_padding_top</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:gravity">left|center_vertical</item>
+        <item name="android:background">@drawable/selector_smenu_item</item>
+    </style>
+</resources>
+        
+        

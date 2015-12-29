@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="我的活动" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/event_my_ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/page_rl_title"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/event_my_btn_creat"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_height"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_header_left"
+            android:clickable="true"
+            android:padding="8dp"
+            android:text="发起的活动"
+            android:textColor="@drawable/selector_color_gary_white"
+            android:textSize="@dimen/textsize_text" />
+
+        <Button
+            android:id="@+id/event_my_btn_join"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_height"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_header_right"
+            android:clickable="true"
+            android:padding="8dp"
+            android:text="参加的活动"
+            android:textColor="@drawable/selector_color_gary_white"
+            android:textSize="@dimen/textsize_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/event_my_ll_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_my_ll_button"
+        android:background="#E4E4E4"
+        android:orientation="horizontal"
+        android:padding="3dp" >
+
+        <LinearLayout
+            android:id="@+id/event_my_ll_type"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/event_my_tv_type"
+                style="@style/event_search_filter_text"
+                android:text="类别" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/event_my_ll_prog"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/event_my_tv_prog"
+                style="@style/event_search_filter_text"
+                android:text="进度" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/event_my_ll_state"
+            style="@style/event_search_filter_back" >
+
+            <TextView
+                android:id="@+id/event_my_tv_state"
+                style="@style/event_search_filter_text"
+                android:text="状态" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/event_my_ll_button"
+        android:background="@drawable/shadow_top" />
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/event_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/event_my_ll_filter"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:headerDividersEnabled="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false" />
+
+    <LinearLayout
+        android:id="@+id/event_ll_empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@color/gray_background"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/event_empty_tv_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="很抱歉，您所在的城市暂无活动" />
+
+            <TextView
+                android:id="@+id/event_empty_tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/event_empty_tv_0"
+                android:layout_below="@id/event_empty_tv_0"
+                android:text="您可以" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/event_empty_other_area"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_round_btn_blue_reverse"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="换个地方转一转"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_title" />
+
+        <TextView
+            android:id="@+id/event_empty_add_event"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_round_btn_blue"
+            android:gravity="center_horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="发个活动"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/textsize_title" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/event_my_shadow_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/event_my_ll_filter"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/event_my_shadow_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/event_my_ll_filter"
+        android:background="@color/black_80"
+        android:visibility="gone" />
+
+    <!--
+         <GridView
+        android:id="@+id/event_my_gv_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_my_ll_filter"
+        android:background="@drawable/main_dropdown_list_bkg_left"
+        android:fadingEdge="none"
+        android:numColumns="3"
+        android:visibility="gone" />
+    -->
+
+    <LinearLayout
+        android:id="@+id/event_my_pop_category"
+        android:layout_width="@dimen/pop_item_width0"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_my_ll_filter"
+        android:background="@drawable/main_dropdown_list_bkg_left"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/event_my_cate_0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="不限" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/event_my_cate_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="即时活动" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/event_my_cate_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="普通活动" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/event_my_pop_progress"
+        android:layout_width="@dimen/pop_item_width0"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_my_ll_filter"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/main_dropdown_list_bkg_center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/event_my_prog_0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="不限" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/event_my_prog_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="报名中" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/event_my_prog_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="即将开始" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/event_my_prog_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="正在进行" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/event_my_prog_4"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="已结束" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/event_my_pop_state"
+        android:layout_width="@dimen/pop_item_width0"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/event_my_ll_filter"
+        android:background="@drawable/main_dropdown_list_bkg_right"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/event_my_state_0"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="不限" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/event_my_state_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="达成" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/event_my_state_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="失败" />
+
+        <View style="@style/line_gray_stroke_h" />
+
+        <TextView
+            android:id="@+id/event_my_state_3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/selector_button_tran_gray"
+            android:gravity="center"
+            android:text="招募中" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/item_joiner_iv_face"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/default_face" />
+
+    <TextView
+        android:id="@+id/item_event_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:gravity="right"
+        android:singleLine="true"
+        android:textColor="@color/gray_text"
+        android:text="@string/infilling"
+        android:textSize="@dimen/textsize_subtext" />
+    
+    <TextView
+        android:id="@+id/item_event_tv_nick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/item_joiner_iv_face"
+        android:layout_toLeftOf="@+id/item_event_tv_time"
+        android:textSize="@dimen/textsize_text"
+        android:textColor="@android:color/black"
+        android:text="@string/infilling" />
+
+
+    <TextView
+        android:id="@+id/item_event_tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_event_tv_time"
+        android:layout_toRightOf="@+id/item_joiner_iv_face"
+        android:layout_marginTop="5dp"
+        android:textSize="@dimen/textsize_subtext"
+        android:text="@string/infilling"
+        android:textColor="@color/gray_text" />
+
+
+</RelativeLayout>

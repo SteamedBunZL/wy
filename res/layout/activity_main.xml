@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <!-- 底部菜单 -->
+
+    <RelativeLayout
+        android:id="@+id/main_rl_bottom"
+        style="@style/page_titlebar"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/main_btn_left"
+            style="@style/page_backbtn"
+            android:background="@drawable/selector_button_foot_left" />
+
+        <Button
+            android:id="@+id/main_btn_mid"
+            style="@style/page_backbtn"
+            android:layout_centerInParent="true"
+            android:background="@drawable/selector_button_foot_mid" />
+
+        <FrameLayout
+            android:id="@+id/rl_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/main_btn_right"
+                    style="@style/page_backbtn"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/selector_button_foot_right" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_message_circle"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="3dp"
+                android:background="@drawable/circle_message"
+                android:layout_gravity="right|top"
+                android:visibility="visible" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_rl_bottom"
+        android:layout_below="@id/page_rl_title" >
+
+        <!-- Fragment -->
+
+        <LinearLayout
+            android:id="@+id/main_ll_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+        <!-- 半圆形菜单 -->
+
+        <RelativeLayout
+            android:id="@+id/main_rl_circle_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/menu_iv_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/arc" />
+
+            <TextView
+                android:id="@+id/menu_venue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/menu_iv_bg"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:drawableTop="@drawable/menu_search_venue"
+                android:paddingBottom="5dp"
+                android:text="@string/venue_find"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/menu_invite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@id/menu_iv_bg"
+                android:layout_marginRight="20dp"
+                android:drawableTop="@drawable/menu_invitation"
+                android:paddingBottom="5dp"
+                android:text="@string/invite_add"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/menu_add_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/menu_iv_bg"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:drawableTop="@drawable/menu_add_event"
+                android:text="@string/event_add"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/menu_find_event"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/menu_venue"
+                android:layout_marginBottom="5dp"
+                android:layout_toRightOf="@+id/menu_venue"
+                android:drawableTop="@drawable/menu_search_event"
+                android:text="@string/event_find"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/menu_find_topic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/menu_invite"
+                android:layout_marginBottom="5dp"
+                android:layout_toLeftOf="@+id/menu_invite"
+                android:drawableTop="@drawable/menu_search_topic"
+                android:text="@string/topic_add"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <!-- 底部菜单阴影效果 -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_above="@id/main_rl_bottom"
+        android:layout_marginTop="-5dp"
+        android:background="@drawable/shadow_bottom" />
+
+</RelativeLayout>

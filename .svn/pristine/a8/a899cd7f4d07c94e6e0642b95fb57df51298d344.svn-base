@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="HorizontalPicker">
+        <attr name="MaxValue" format="integer" />
+        <attr name="MinValue" format="integer" />
+        <attr name="TextBackground" format="reference" />
+    </declare-styleable>
+
+
+</resources>

@@ -1,0 +1,25 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="smenu_item_padding_top">10dp</dimen>
+	
+    <dimen name="textsize_title_bar">18sp</dimen>
+    <dimen name="textsize_title">18sp</dimen>
+    <dimen name="textsize_button">16sp</dimen>
+    <dimen name="textsize_eidt">@dimen/textsize_text</dimen>
+    <dimen name="textsize_text">15sp</dimen>
+    <dimen name="textsize_subtext">14sp</dimen>
+    <dimen name="textsize_two_date">13sp</dimen>
+    <dimen name="textsize_copyright">12sp</dimen>
+    <dimen name="textsize_superscript">12sp</dimen>
+    
+    <dimen name="image_radius">4dp</dimen>
+    <dimen name="stroke_rectangle">1px</dimen>
+    <dimen name="stroke_face">2dp</dimen>
+    <dimen name="smenu_shadow_width">7dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dip10">10dp</dimen>
+    <dimen name="dip8">8dp</dimen>
+
+</resources>

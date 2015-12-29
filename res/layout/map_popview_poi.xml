@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/popview_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/popup_bg"
+        android:paddingBottom="20dip"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="8dip" >
+
+        <TextView
+            android:id="@+id/popview_address_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dip"
+            android:textSize="@dimen/textsize_text"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/popview_right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="1dp"
+            android:textSize="@dimen/textsize_button"
+            android:text="标记"
+            android:background="@drawable/rectangle_round_white"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+</LinearLayout>

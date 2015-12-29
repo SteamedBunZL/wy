@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/myhonesty_title_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="@string/user_moreinfo" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/myhonesty_ll_state"
+        style="@style/info_item_top"
+        android:layout_marginBottom="-1dp" >
+
+        <TextView
+            style="@style/info_item_title"
+            android:text="认证状态" />
+
+        <TextView
+            android:id="@+id/myhonesty_tv_state"
+            style="@style/info_item_content"
+            android:drawableRight="@null"
+            android:text="审核未通过"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myhonesty_ll_reason"
+        style="@style/info_item_bottom"
+        android:minHeight="@dimen/item_height"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-1dp" >
+
+        <TextView
+            style="@style/info_item_title"
+            android:layout_height="@dimen/item_height"
+            android:layout_gravity="top"
+            android:text="原　　因" />
+
+        <TextView
+            android:id="@+id/myhonesty_tv_reason"
+            style="@style/info_item_content"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:drawableRight="@null"
+            android:textColor="@color/red" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/myhonesty_btn_revalid"
+        style="@style/button_big"
+        android:layout_marginTop="10dp"
+        android:text="点此返回重新认证" />
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<resources>
+   
+    <declare-styleable name="ClearableEditText">
+        <attr name="text" format="string"/>
+        <attr name="hint" format="string"/>
+        <attr name="singleLine" format="boolean"/>
+        <attr name="gravity" format="integer"/>
+        <attr name="inputType" format="integer"/>
+        <attr name="imeOptions" format="integer"/>        
+    </declare-styleable>
+
+</resources>

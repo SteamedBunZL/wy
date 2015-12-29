@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        android:layout_gravity="top"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="活动交流" />
+    </RelativeLayout>
+	<ListView
+	    android:id="@+id/event_comment_lv"
+	    android:layout_below="@id/page_rl_title"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:dividerHeight="1dp"
+	    android:background="@android:color/transparent"
+	    android:fadingEdge="none" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/black_t"
+        android:padding="10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal" >
+           <EditText
+               android:id="@+id/event_comment_et_content"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:minHeight="34dp"
+               android:padding="5dp"
+               android:maxLines="3"
+               android:textSize="@dimen/textsize_eidt"
+               android:layout_gravity="center_vertical"
+               android:background="@drawable/rectangle_radius_white" />
+           <!-- <com.whoyao.ui.ClearableEdittext
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="match_parent"
+               android:background="@drawable/rectangle_radius_white" /> -->
+           <Button
+               android:id="@+id/event_comment_btn_enter0"
+               android:layout_width="50dp"
+               android:layout_height="34dp"
+               android:layout_marginLeft="10dp"
+               android:layout_gravity="bottom"
+               android:text="发布"
+               android:textColor="@android:color/white"
+               android:background="@drawable/selector_button_blue" />
+       </LinearLayout> 
+       <LinearLayout
+           android:id="@+id/event_comment_ll_code"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="10dp"
+           android:visibility="gone"
+           android:orientation="horizontal" >
+           <ImageView
+               android:id="@+id/event_comment_iv_code"
+               android:layout_width="90dp"
+               android:background="@color/gray_background"
+               android:layout_height="34dp"
+               android:layout_marginRight="10dp" />
+           <EditText
+               android:id="@+id/event_comment_et_code"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:paddingLeft="5dp"
+               android:paddingRight="5dp"
+               android:gravity="center_vertical"
+               android:layout_height="34dp"
+               android:minEms="5"
+               android:background="@drawable/rectangle_radius_white" />
+           <Button
+               android:id="@+id/event_comment_btn_enter1"
+               android:layout_width="50dp"
+               android:layout_height="34dp"
+               android:layout_marginLeft="10dp"
+               android:text="发布"
+               android:textColor="@android:color/white"
+               android:background="@drawable/selector_button_blue" />
+       </LinearLayout> 
+    </LinearLayout>
+    
+</RelativeLayout>

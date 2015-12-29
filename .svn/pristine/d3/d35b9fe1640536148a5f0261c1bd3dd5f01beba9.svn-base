@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/retpsp_rl_title"
+        style="@style/page_titlebar" >
+        <Button
+            android:id="@+id/retpsp_btn_back"
+            style="@style/page_backbtn" />
+        <TextView
+            style="@style/page_title"
+            android:text="@string/retrieve_phone" />
+    </RelativeLayout>
+	    <RelativeLayout
+        android:id="@+id/retpsp_tv_inputcode"
+        android:layout_below="@id/retpsp_rl_title"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+        
+        <TextView
+            android:id="@+id/retp_tv_step1"
+            android:layout_alignParentLeft="true"
+            android:hint="@string/send_vcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+        <TextView
+            android:id="@+id/retp_tv_step2"
+            android:layout_centerHorizontal="true"
+            android:hint="手机验证"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+        <TextView
+            android:id="@+id/retp_tv_step3"
+            android:layout_alignParentRight="true"
+            android:text="设置新密码"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+        <TextView
+            android:layout_toRightOf="@id/retp_tv_step1"
+            android:layout_toLeftOf="@id/retp_tv_step2"
+            android:gravity="center"
+            android:hint=">"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+        <TextView
+            android:layout_toRightOf="@id/retp_tv_step2"
+            android:layout_toLeftOf="@id/retp_tv_step3"
+            android:gravity="center"
+            android:hint=">"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        
+    </RelativeLayout>
+
+	<com.whoyao.widget.ClearEditText
+        android:id="@+id/retpsp_et_password"
+        android:layout_below="@id/retpsp_tv_inputcode"
+        android:hint="@string/hint_input_pwd_retrieve"
+        android:imeOptions="actionDone"
+        android:inputType="textVisiblePassword"
+        style="@style/edittext_big" />
+    <Button style="@style/button_big"
+        android:id="@+id/retpsp_btn_enter"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/retpsp_et_password"
+        android:text="确定" />
+    
+</RelativeLayout>

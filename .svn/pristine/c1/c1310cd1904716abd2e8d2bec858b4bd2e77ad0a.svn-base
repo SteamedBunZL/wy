@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 引导页 -->
+<merge  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.whoyao"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    
+    <org.taptwo.widget.ViewFlow
+        android:id="@+id/guide_vf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+    <org.taptwo.widget.CircleFlowIndicator
+        android:id="@+id/guide_fi"
+        android:layout_height="@dimen/item_sub_height"
+        android:layout_width="wrap_content"
+        app:radius="5dp"
+        app:spacing="5dp"
+        app:activeColor="@color/smalt_titlebar"
+        app:inactiveColor="@color/smalt_titlebar"
+        android:layout_gravity="center_horizontal|bottom" />
+</merge>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.whoyao"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="场馆详情" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/topic_detial_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="240dp" >
+
+                <org.taptwo.widget.ViewFlow
+                    android:id="@+id/venue_info_vp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rectangle_radius_gray_header"
+                    android:fadingEdge="none"
+                    android:spacing="10dp" />
+
+                <org.taptwo.widget.CircleFlowIndicator
+                    android:id="@+id/venue_info_ci"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    app:activeColor="@android:color/white"
+                    app:inactiveColor="@color/black_t"
+                    app:inactiveType="fill"
+                    app:radius="5dp"
+                    app:spacing="5dp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="场馆信息："
+                android:textSize="@dimen/textsize_text" />
+
+            <TextView
+                android:id="@+id/venue_info_tv_desc"
+                style="@style/textview_subtext"
+                android:layout_marginTop="5dp"
+                android:text="商家很忙，还没有顾上填写信息呢！"
+                android:singleLine="false" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:text="辅助信息："
+                android:textSize="@dimen/textsize_text" />
+
+            <TextView
+                android:id="@+id/venue_info_tv_none_supple"
+                style="@style/textview_subtext"
+                android:singleLine="false"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/venue_info_tv_supple_0"
+                    style="@style/textview_subtext"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/venue_supple_park"
+                    android:drawablePadding="5dp" />
+
+                <TextView
+                    android:id="@+id/venue_info_tv_supple_1"
+                    style="@style/textview_subtext"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp" />
+
+                <TextView
+                    android:id="@+id/venue_info_tv_supple_2"
+                    style="@style/textview_subtext"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/venue_info_tv_supple_3"
+                    style="@style/textview_subtext"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp" />
+
+                <TextView
+                    android:id="@+id/venue_info_tv_supple_4"
+                    style="@style/textview_subtext"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp" />
+
+                <TextView
+                    android:id="@+id/venue_info_tv_supple_5"
+                    style="@style/textview_subtext"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:drawablePadding="5dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="交通信息："
+                android:textSize="@dimen/textsize_text" />
+
+            <TextView
+                android:id="@+id/venue_info_tv_transport"
+                style="@style/textview_subtext"
+                android:layout_marginTop="5dp"
+                android:text="商家很忙，还没有顾上填写信息呢！"
+                android:singleLine="false" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

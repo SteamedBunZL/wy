@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="安全和隐私" />
+    </RelativeLayout>
+
+    <CheckBox
+        android:id="@+id/set_cb_show_location"
+        style="@style/edittext_big"
+        android:button="@null"
+        android:drawableRight="@drawable/selector_switch"
+        android:layout_margin="10dp"
+        android:text="让附近的人看见我"
+        android:textStyle="normal"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/textsize_subtext"
+        android:hint="开启后，如果碰到骚扰，可以快速关闭，清除位置信息。" />
+
+    <CheckBox
+        android:id="@+id/set_cb_show_event"
+        style="@style/edittext_big"
+        android:button="@null"
+        android:drawableRight="@drawable/selector_switch"
+        android:layout_margin="10dp"
+        android:text="允许别人查看我参加的活动"
+        android:textStyle="normal"
+        android:textSize="@dimen/textsize_text" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/textsize_subtext"
+        android:hint="开启后，其他人可以看到您参加的普通活动，如不希望被查看，请关闭。" />
+</LinearLayout>

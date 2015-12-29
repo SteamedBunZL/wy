@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_container"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="@string/venue_title" />
+
+        <ImageView
+            android:id="@+id/venue_iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            android:src="@drawable/selector_button_search" />
+
+        <ImageView
+            android:id="@+id/venue_iv_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_toLeftOf="@id/venue_iv_search"
+            android:src="@drawable/selector_button_event_map" />
+    </RelativeLayout>
+
+<!--     <ListView
+        android:id="@+id/venue_lv"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:scrollbarStyle="outsideOverlay"
+        android:divider="@android:color/transparent"
+        android:layout_below="@+id/page_rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </ListView>   -->
+
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/venue_lv"
+        android:layout_below="@+id/page_rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp" />
+
+	<include layout="@layout/empty_event" />
+
+</RelativeLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="取消报名" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/event_cancel_tv_warn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/page_title"
+        android:layout_margin="10dp"
+        android:paddingLeft="10dp"
+        android:text="请填写取消参加的原因(至少填写一项)"
+        android:textColor="@color/red"
+        android:textSize="@dimen/textsize_text" />
+
+    <TextView
+        android:id="@+id/event_cancel_tv_title0"
+        style="@style/info_item_title"
+        android:paddingLeft="10dp"
+        android:layout_below="@id/event_cancel_tv_warn"
+        android:text="取消原因：" />
+
+    <TextView
+        android:id="@+id/event_cancel_tv_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event_cancel_tv_title0"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle_radius_white"
+        android:drawableRight="@drawable/xiala"
+        android:hint="@string/hint_select"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/event_cancel_tv_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event_cancel_tv_reason"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:text="其他原因：" />
+
+    <EditText
+        android:id="@+id/event_cancel_et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/event_cancel_tv_title1"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle_radius_white"
+        android:gravity="top"
+        android:hint="请填写原因，150个字以内"
+        android:lines="8"
+        android:padding="5dp"
+        android:textSize="@dimen/textsize_eidt" />
+
+    <TextView
+        android:id="@+id/event_cancel_tv_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/event_cancel_et_content"
+        android:layout_alignRight="@id/event_cancel_et_content"
+        android:hint="0/150"
+        android:padding="5dp" />
+
+    <Button
+        android:id="@+id/event_cancel_btn_enter"
+        style="@style/button_big"
+        android:layout_below="@id/event_cancel_tv_num"
+        android:layout_marginTop="10dp"
+        android:text="@string/commit" />
+	<RelativeLayout
+	    android:id="@+id/event_cancel_rl_listview"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="-8dp"
+        android:padding="2dp"
+        android:visibility="gone"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_below="@id/event_cancel_tv_reason"
+        android:background="@drawable/rectangle_radius_white1" >
+    <ListView
+        android:id="@+id/event_cancel_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:divider="@color/gray_stroke" />
+    </RelativeLayout>
+</RelativeLayout>

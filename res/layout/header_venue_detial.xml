@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/venue_detial_tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="@string/infilling"
+            android:textSize="@dimen/textsize_button" />
+
+        <TextView
+            android:id="@+id/venue_detial_tv_markvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="@string/infilling"
+            android:textColor="@color/carmine_text"
+            android:textSize="@dimen/textsize_text"
+            android:textStyle="italic" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/venue_detial_iv_logo"
+            android:layout_width="@dimen/image_bill_width"
+            android:layout_height="@dimen/image_height"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/default_bill" />
+
+        <TextView
+            android:id="@+id/venue_detial_tv_service_type"
+            style="@style/textview_subtext"
+            android:layout_alignTop="@+id/venue_detial_iv_logo"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/venue_detial_iv_logo"
+            android:drawableLeft="@drawable/icon_venue_service_type"
+            android:drawablePadding="5dp" />
+
+        <TextView
+            android:id="@+id/venue_detial_tv_phone"
+            style="@style/textview_subtext"
+            android:layout_alignBottom="@+id/venue_detial_iv_logo"
+            android:layout_alignLeft="@+id/venue_detial_tv_business_time"
+            android:drawableLeft="@drawable/icon_venue_phone"
+            android:drawablePadding="5dp" />
+
+        <TextView
+            android:id="@+id/venue_detial_tv_business_time"
+            style="@style/textview_subtext"
+            android:gravity="center_vertical"
+            android:layout_above="@+id/venue_detial_tv_phone"
+            android:layout_alignLeft="@+id/venue_detial_tv_service_type"
+            android:layout_below="@+id/venue_detial_tv_service_type"
+            android:drawableLeft="@drawable/icon_venue_business_time"
+            android:drawablePadding="5dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/venue_detial_tv_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/rectangle_radius_gray"
+        android:drawableLeft="@drawable/layer_addr"
+        android:drawableRight="@drawable/arrow_right"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/item_height"
+        android:padding="5dp"
+        android:text="@string/infilling"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/textsize_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_e4"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp" >
+		<LinearLayout
+            android:id="@+id/venue_detial_btn_types"
+            style="@style/event_search_filter_back" >
+            <TextView
+                android:id="@+id/venue_detial_btn_type"
+                style="@style/event_search_filter_texts"
+                android:textColor="@drawable/selector_color_gary_white" 
+                android:text="类型" />
+            <ImageView 
+                android:id="@+id/venue_detial_img_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/selector_triangle"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/venue_detial_btn_dates"
+            style="@style/event_search_filter_back" >
+            <TextView
+                android:id="@+id/venue_detial_btn_date"
+                style="@style/event_search_filter_text"
+                android:textColor="@drawable/selector_color_gary_white" 
+                android:text="今天" />
+        </LinearLayout>
+        <!-- <com.whoyao.widget.DrawableCenterTextView
+            android:id="@+id/venue_detial_btn_type"
+            style="@style/event_search_filter_back"
+            android:layout_width="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/selector_triangle"
+            android:text="类型"
+            android:textColor="@drawable/selector_color_gary_white" />
+
+        <com.whoyao.widget.DrawableCenterTextView
+            android:id="@+id/venue_detial_btn_date"
+            style="@style/event_search_filter_back"
+            android:layout_width="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:drawableRight="@drawable/selector_triangle"
+            android:text="今天"
+            android:textColor="@drawable/selector_color_gary_white" /> -->
+    </LinearLayout>
+    <TextView 
+        android:id="@+id/header_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="很抱歉，该场馆暂不提供网上预订服务"
+        android:gravity="center"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

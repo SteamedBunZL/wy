@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_background"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/page_rl_title"
+            style="@style/page_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/page_btn_back"
+                style="@style/page_backbtn" />
+
+            <TextView
+                android:id="@+id/page_tv_title"
+                style="@style/page_title"
+                android:text="身份认证" />
+        </RelativeLayout>
+
+        <LinearLayout
+            style="@style/info_item_top"
+            android:layout_marginBottom="-1dp" >
+
+            <TextView
+                style="@style/info_item_title"
+                android:text="@string/label_realname" />
+
+            <com.whoyao.widget.ClearEditText
+                android:id="@+id/myvh_et_name"
+                style="@style/info_item_content"
+                android:background="@android:color/transparent"
+                android:drawableRight="@null"
+                android:gravity="left|center_vertical"
+                android:hint="@string/real_name_default" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/myvh_ll_birthday"
+            style="@style/info_item_middle"
+            android:layout_marginBottom="-1dp" >
+
+            <TextView
+                style="@style/info_item_title"
+                android:text="@string/label_birthday_4" />
+
+            <TextView
+                android:id="@+id/myvh_tv_birthday"
+                style="@style/info_item_content"
+                android:drawableRight="@null"
+                android:gravity="left|center_vertical"
+                android:hint="@string/hint_input" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/info_item_bottom"
+            android:layout_marginBottom="-1dp" >
+
+            <TextView
+                style="@style/info_item_title"
+                android:text="身份证号：" />
+
+            <com.whoyao.widget.ClearEditText
+                android:id="@+id/myvh_et_idnum"
+                style="@style/info_item_content"
+                android:background="@android:color/transparent"
+                android:drawableRight="@null"
+                android:gravity="left|center_vertical"
+                android:hint="@string/id_default" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/myvh_btn_enter"
+            style="@style/button_big"
+            android:layout_marginTop="10dp"
+            android:text="上传身份证正面照片" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/myvh_rl_upload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_background"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/page_rl_title_1"
+            style="@style/page_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/page_btn_back_1"
+                style="@style/page_backbtn" />
+
+            <TextView
+                style="@style/page_title"
+                android:text="上传照片" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/myvh_rl_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp" >
+
+            <Button
+                android:id="@+id/myvh_btn_cancle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_button_blue"
+                android:padding="10dp"
+                android:text=" 取消 "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textsize_button" />
+
+            <Button
+                android:id="@+id/myvh_btn_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/selector_button_blue"
+                android:padding="10dp"
+                android:text=" 上传 "
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textsize_button" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/myvh_iv_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/myvh_rl_bottom"
+            android:layout_below="@id/page_rl_title_1"
+            android:background="@color/black_t"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+</merge>

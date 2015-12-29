@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="@string/add_my_free" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/myaf_ll_begin"
+        style="@style/info_item_top" >
+
+        <TextView
+            style="@style/info_item_title"
+            android:text="开始时间：" />
+
+        <TextView
+            android:id="@+id/myaf_tv_begin"
+            style="@style/info_item_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/myaf_ll_end"
+        style="@style/info_item_middle" >
+
+        <TextView
+            style="@style/info_item_title"
+            android:text="结束时间：" />
+
+        <TextView
+            android:id="@+id/myaf_tv_end"
+            style="@style/info_item_content" />
+    </LinearLayout>
+
+    <RelativeLayout 
+      style="@style/info_item_middle"
+      android:layout_height="wrap_content"
+      android:padding="10dp" >
+        <TextView
+            android:id="@+id/myaf_tv_content"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentTop="true"           
+            android:text="闲人宣言：" />
+        <EditText 
+            android:id="@+id/event_desc_et_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myaf_tv_content"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:gravity="top"
+            android:lines="5"
+            android:textSize="@dimen/textsize_eidt"
+            android:background="@drawable/rectangle_has_stroke_white"/>
+        <TextView 
+            android:id="@+id/event_desc_tv_num"
+            android:layout_alignRight="@id/event_desc_et_content"
+            android:layout_alignBottom="@id/event_desc_et_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:hint="0/50"/>
+    </RelativeLayout>
+    <Button 
+        android:id="@+id/event_desc_btn_enter"
+        style="@style/button_big"
+        android:layout_marginTop="10dp"
+        android:text="@string/add_my_free" />
+</LinearLayout>

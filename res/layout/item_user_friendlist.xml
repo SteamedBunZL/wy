@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_radius_white_gary"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/user_iv_face"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/default_user_face" />
+
+    <ImageView
+        android:id="@+id/user_iv_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/arrow_right" />
+
+    <ImageView
+        android:id="@+id/user_iv_honesty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/user_iv_arrow"
+        android:src="@drawable/selector_state_honesty"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"/>
+    <ImageView
+        android:id="@+id/user_iv_mobile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/user_iv_honesty"
+        android:src="@drawable/selector_state_mobile"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"/>
+    <ImageView
+        android:id="@+id/user_iv_free"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/user_iv_mobile"
+        android:src="@drawable/selector_state_free"
+        android:paddingBottom="3dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="3dp"/>
+
+    <TextView
+        android:id="@+id/user_tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/user_iv_face"
+        android:layout_toLeftOf="@+id/user_iv_arrow"
+        android:text="@string/infilling"
+        android:textSize="@dimen/textsize_subtext"
+        android:textColor="@color/carmine_text" />
+
+    <TextView
+        android:id="@+id/user_tv_nick"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_toRightOf="@+id/user_iv_face"
+        android:layout_toLeftOf="@+id/user_iv_free"
+        android:singleLine="true"
+        android:text="@string/infilling"
+        android:textSize="@dimen/textsize_text"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/user_tv_tag"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/user_iv_face"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_toRightOf="@+id/user_iv_face"
+        android:layout_toLeftOf="@+id/user_tv_distance"
+        android:singleLine="true"
+        android:hint="@string/hint_other_tag"
+        android:textSize="@dimen/textsize_subtext"
+        android:textColor="@color/gray_text"
+        android:text="@string/infilling"/>
+
+    <TextView
+        android:id="@+id/user_tv_age_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="18dip"
+        android:layout_alignLeft="@+id/user_tv_nick"
+        android:layout_centerVertical="true"
+        android:background="@drawable/sex_man"
+        android:gravity="center"
+        android:text="@string/infilling"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/textsize_subtext" />
+
+</RelativeLayout>

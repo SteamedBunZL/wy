@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="时空设置" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="工作地"
+        android:textSize="@dimen/textsize_text" />
+
+    <RelativeLayout
+        android:id="@+id/set_rl_work_location"
+        style="@style/info_item_top"
+        android:layout_marginTop="0dp" >
+
+        <TextView
+            android:id="@+id/set_work_location"
+            style="@style/info_item_title"
+            android:text="地　　址：" />
+
+        <ImageButton
+            android:id="@+id/set_iv_work_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/postion" />
+
+        <TextView
+            android:id="@+id/set_tv_work_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/set_iv_work_location"
+            android:layout_toRightOf="@id/set_work_location"
+            android:singleLine="true"
+            android:hint="@string/setting_addr_work_input"
+            android:textSize="@dimen/textsize_text"
+            android:textColor="@color/blue_text" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/set_ll_work_time"
+        style="@style/info_item_bottom"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/info_item_title"
+            android:text="工作时间：" />
+
+        <TextView
+            android:id="@+id/set_tv_work_time"
+            style="@style/info_item_content"
+            android:gravity="left|center_vertical"
+            android:layout_marginLeft="0dp"
+            android:drawableRight="@null"
+            android:text="@string/setting_time_work_input" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/set_btn_work_enter"
+        style="@style/button_big"
+        android:text="保存" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="居住地"
+        android:textSize="@dimen/textsize_text" />
+
+    <RelativeLayout
+        android:id="@+id/set_rl_home_location"
+        style="@style/info_item_top"
+        android:layout_marginTop="0dp" >
+
+        <TextView
+            android:id="@+id/set_home_location"
+            style="@style/info_item_title"
+            android:text="地　　址：" />
+
+        <ImageButton
+            android:id="@+id/set_iv_home_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/postion" />
+
+        <TextView
+            android:id="@+id/set_tv_home_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/set_iv_home_location"
+            android:layout_toRightOf="@id/set_home_location"
+            android:singleLine="true"
+            android:hint="@string/setting_addr_home_input"
+            android:textSize="@dimen/textsize_text"
+            android:textColor="@color/blue_text" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/set_ll_home_time"
+        style="@style/info_item_bottom"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/info_item_title"
+            android:text="休息时间：" />
+
+        <TextView
+            android:id="@+id/set_tv_home_time"
+            style="@style/info_item_content"
+            android:gravity="left|center_vertical"
+            android:layout_marginLeft="0dp"
+            android:drawableRight="@null"
+            android:text="@string/setting_time_home_input" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/set_btn_home_enter"
+        style="@style/button_big"
+        android:text="保存" />
+
+</LinearLayout>

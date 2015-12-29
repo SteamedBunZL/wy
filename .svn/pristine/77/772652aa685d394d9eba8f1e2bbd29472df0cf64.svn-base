@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:drawable="@drawable/checkbox_mark_carmine_hover"></item>
+    <item android:state_selected="true" android:drawable="@drawable/checkbox_mark_carmine_hover"></item>
+    <item android:drawable="@drawable/checkbox_carmine_mark"></item>
+</selector>

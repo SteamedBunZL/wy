@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="blood_group">
+        <item>A型</item>
+        <item>B型</item>
+        <item>O型</item>
+        <item>AB型</item>
+        <item>其他血型</item>
+    </string-array>
+    <string-array name="sex_info">
+        <item></item>
+        <item>男性</item>
+        <item>女性</item>
+    </string-array>
+    <string-array name="pay_type">
+        <item>AA制</item>
+        <item>男生付款</item>
+        <item>女生付款</item>
+        <item>输家付费</item>
+    </string-array>
+    <string-array name="age_group">
+        <item>不限</item>
+        <item>18岁以下</item>
+        <item>18－25岁</item>
+        <item>25－28岁</item>
+        <item>28－32岁</item>
+        <item>32－35岁</item>
+        <item>35－38岁</item>
+        <item>38－45岁</item>
+        <item>45岁以上</item>
+    </string-array>
+    <string-array name="event_tags">
+        <item>篮球</item>
+        <item>足球</item>
+        <item>羽毛球</item>
+        <item>网球</item>
+        <item>乒乓球</item>
+        <item>台球</item>
+        <item>壁球</item>
+        <item>排球</item>
+        <item>游泳</item>
+        <item>跑步</item>
+        <item>骑车</item>
+        <item>滑雪</item>
+        <item>瑜伽</item>
+        <item>摄影</item>
+        <item>郊游</item>
+        <item>K歌</item>
+        <item>吃饭</item>
+        <item>看电影</item>
+    </string-array>
+    <!--
+          <array name="tag_color">
+        <item>@color/tag_0</item>
+        <item>@color/tag_1</item>
+        <item>@color/tag_2</item>
+        <item>@color/tag_3</item>
+        <item>@color/tag_4</item>
+        <item>@color/tag_5</item>
+    </array>
+    -->
+    <array name="tag_color">
+        <item>@color/tag_red</item>
+        <item>@color/tag_green</item>
+        <item>@color/tag_blue</item>
+    </array>
+    <array name="event_prog_color">
+        <item>@color/gray_text</item>
+ <!-- 没有 -->
+        <item>@color/yellow_text</item>
+        <item>@color/green_text</item>
+        <item>@color/gray_text</item>
+        <item>@color/red_text</item>
+    </array>
+
+    <string-array name="cancel_event">
+        <item></item>
+        <item>计划时间有变</item>
+        <item>地点太远</item>
+        <item>费用太高</item>
+        <item>不感兴趣了</item>
+        <item>一起去的朋友不去了</item>
+    </string-array>
+    <string-array name="accuse_creater">
+        <item></item>
+        <item>不到场参加活动</item>
+        <item>迟到</item>
+        <item>活动与实际情况不符</item>
+        <item>收费过高</item>
+    </string-array>
+    <string-array name="join_state">
+        <item>已参加</item>
+        <item>未参加</item>
+    </string-array>
+    <string-array name="event_type">
+        <item>不限</item>
+ <!-- 被tags多了一个"不限" -->
+        <item>篮球</item>
+        <item>足球</item>
+        <item>羽毛球</item>
+        <item>网球</item>
+        <item>乒乓球</item>
+        <item>台球</item>
+        <item>壁球</item>
+        <item>排球</item>
+        <item>游泳</item>
+        <item>跑步</item>
+        <item>骑车</item>
+        <item>滑雪</item>
+        <item>瑜伽</item>
+        <item>摄影</item>
+        <item>郊游</item>
+        <item>K歌</item>
+        <item>吃饭</item>
+        <item>看电影</item>
+    </string-array>
+    <string-array name="venue_service_type">
+        <item>羽毛球</item>
+        <item>乒乓球</item>
+        <item>篮球</item>
+        <item>足球</item>
+        <item>网球</item>
+        <item>高尔夫</item>
+        <item>斯若克</item>
+        <item>壁球</item>
+        <item>K歌</item>
+        <item>吃饭</item>
+        <item>电影</item>
+        <item>郊游</item>
+        <item>美式接球</item>
+    </string-array>
+    <string-array name="venue_supple_name">
+        <item>停车场</item>
+        <item>器材租赁</item>
+        <item>柜子租赁</item>
+        <item>休息区</item>
+        <item>洗浴设施</item>
+        <item>场馆卖品</item>
+    </string-array>
+    <string-array name="venue_place_type">
+        <item>羽毛球场</item>
+        <item>网球场</item>
+        <item>乒乓球场</item>
+        <item>篮球场</item>
+        <item>足球场</item>
+    </string-array>
+    <!-- states = {"","未达成","已达成","招募中","已取消"}; -->
+    <string-array name="event_states_enum">
+        <item></item>
+        <item>未达成</item>
+        <item>已达成</item>
+        <item>招募中</item>
+        <item></item>
+ <!-- 关闭 -->
+    </string-array>
+    <!-- progress = {"","即将开始","正在进行","已结束","报名中"}; -->
+    <string-array name="event_progress_enum">
+        <item></item>
+        <item>即将开始</item>
+        <item>正在进行</item>
+        <item>已结束</item>
+        <item>报名中</item>
+    </string-array>
+    <string-array name="event_progress_pop">
+        <item>不限</item>
+        <item>即将开始</item>
+        <item>正在进行</item>
+        <item>已结束</item>
+    </string-array>
+    <string-array name="event_state_pop">
+        <item>不限</item>
+        <item>达成</item>
+        <item>失败</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/event_search_title"
+        style="@style/page_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageButton
+            android:id="@+id/page_btn_back_initial"
+            style="@style/page_backbtn" />
+
+        <TextView
+            style="@style/page_title"
+            android:text="自定义标签" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:text="没有合适的标签？自己输入自定义标签吧" />
+
+    <LinearLayout
+        android:id="@+id/ll_tag"
+        style="@style/info_item_top"
+        android:background="@drawable/rectangle_radius_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_tag"
+            style="@style/edittext_white"
+            android:layout_weight="1"
+            android:hint="自定义标签限1-8个字" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            style="@style/info_item_content"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:drawableRight="@null"
+            android:text="0/8"
+            android:textColor="@color/gray_text" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        style="@style/button_big"
+        android:layout_below="@id/event_add_ll_info0"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="提交" />
+
+</LinearLayout>

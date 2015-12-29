@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/page_rl_title"
+        style="@style/page_titlebar" >
+
+        <Button
+            android:id="@+id/page_btn_back"
+            style="@style/page_backbtn" />
+
+        <TextView
+            android:id="@+id/page_tv_title"
+            style="@style/page_title"
+            android:text="TA的活动" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/event_ta_ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/page_rl_title"
+        android:layout_margin="10dp"
+        android:gravity="center_horizontal" >
+
+        <Button
+            android:id="@+id/event_ta_btn_creat"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@drawable/selector_button_header_left"
+            android:clickable="true"
+            android:text="TA发起的"
+            android:textSize="@dimen/textsize_text"
+            android:textColor="@drawable/selector_color_gary_white" />
+
+        <Button
+            android:id="@+id/event_ta_btn_join"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="@drawable/selector_button_header_right"
+            android:clickable="true"
+            android:text="TA参加的"
+            android:textSize="@dimen/textsize_text"
+            android:textColor="@drawable/selector_color_gary_white" />
+    </LinearLayout>
+
+    <handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/event_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/event_ta_ll_button"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:headerDividersEnabled="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/event_ta_ll_button"
+        android:background="@drawable/shadow_top" />
+
+</RelativeLayout>
